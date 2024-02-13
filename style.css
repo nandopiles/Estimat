@@ -40,6 +40,20 @@ p{
     object-fit: cover;
 }
 
+.row{
+    
+}
+
+.col-6, .col-12{
+    margin-top: 20px;
+}
+
+
+
+label{
+    margin-bottom: 10px;
+}
+
 ::-webkit-scrollbar {
     width: 5px; 
 }

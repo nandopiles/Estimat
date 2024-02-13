@@ -16,62 +16,65 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FDDFDB;">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo.png" alt="logo" style="width: 200px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="cancer.html">Cáncer de mama</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="noticias.html">Noticias</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="galeria.html">Galería</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html">Sobre Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <!-- Se elimina el ID repetido -->
-                            <a class="nav-link" href="#">Iniciar Sesión</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+
     </header>
 
     <main>
 
-        <div class="container-fluid">
-            <div class="jumbotron jumbotron-fluid bg-cover" style="background-image: url('https://via.placeholder.com/800x400');background-size: cover; background-position: center;">
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <div class="jumbotron bg-white">
-                            <h1 class="display-4 text-center">Iniciar Sesión</h1>
-                            <form>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
+        <div class="container-fluid"
+            style="background-image: url('img/rosasEstimat.jpg'); background-size: cover; background-position: center; height: 100vh;">
+            <div class="jumbotron jumbotron-fluid bg-cover">
+                <div class="row" style="padding-top: 150px;">
+                    <h1>REGÍSTRATE</h1>
+
+                    <div class="col-6 offset-md-3" style="background-color: white; padding: 30px; border-radius: 15px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+                        <form>
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="nombre">Nombre:</label>
+                                        <input type="text" class="form-control" id="nombre"
+                                            placeholder="Ingresa tu nombre" required>
+                                    </div>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="email">Correo Electrónico:</label>
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="Ingresa tu correo electrónico" required>
+                                    </div>
                                 </div>
-                                <div class="d-grid gap-2">
-                                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="contrasena">Contraseña:</label>
+                                        <input type="password" class="form-control" id="contrasena"
+                                            placeholder="Ingresa tu contraseña" required>
+                                    </div>
+
                                 </div>
-                            </form>
-                        </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="contrasena_repetir">Repetir Contraseña:</label>
+                                        <input type="password" class="form-control" id="contrasena_repetir"
+                                            placeholder="Repite tu contraseña" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-group form-check d-flex justify-content-center ">
+                                        <input type="checkbox" class="form-check-input" id="aceptar_terminos"
+                                            style="margin-right: 10px;" required>
+                                        <label class="form-check-label" for="aceptar_terminos">¿Estás en tratamiento
+                                            activo?</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-center">
+                                        <button type="submit" class="btn btn-secondary btn-block">Enviar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
