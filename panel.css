@@ -55,6 +55,31 @@ h1 {
     color: #136a71;
 }
 
+.usuarios {
+    position: fixed;
+    top: 55px; /* Colocar en la parte superior */
+}
+
+.btnInsertar {
+    position: absolute;
+    top: 100px;
+    right: 60px;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: #136a71;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+
+}
+
 section {
     justify-content: center;
     display: flex;
@@ -63,4 +88,61 @@ section {
 img {
     max-height: 100px;
     max-width: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+tr:nth-child(2n) {
+    background-color: #f2f2f2; /* Filas pares */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
+.btnEditar {
+    background-color: #136a71;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btnEditar:hover {
+    background-color: #1a959e; /* Color de fondo cuando el mouse está encima */
+}
+
+/* Estilos para el botón Eliminar */
+.btnEliminar {
+    background-color: #136a71;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btnEliminar:hover {
+    background-color: #1a959e; /* Color de fondo cuando el mouse está encima */
 }
