@@ -39,9 +39,6 @@ p {
     height: 400px;
     object-fit: cover;
 }
-
-.row {}
-
 .col-6,
 .col-12 {
     margin-top: 20px;
@@ -68,7 +65,7 @@ label {
 }
 
 .profileButtons button{
- background-color: pink;
+ background-color: #ffdfdd;
  width: 200px;
 }
 
@@ -78,23 +75,48 @@ label {
     align-items: center;
     justify-content: center;
     height: 100px;
+    margin-top: 10px;
 }
 
 .nameUser{
+    display: flex;
+    flex-direction: column; /* Para alinear verticalmente */
+    align-items: center; /* Para centrar verticalmente */
+    text-align: center; /* Para centrar horizontalmente */
     margin-bottom: 20px;
 }
-
-.containerProfile {
-    display: flex;
-    align-items: center;
-}
-
 .containerProfile img {
-    margin-right: 10px;
-
+    margin-right: 5px;
 }
 
-.center{
-    display: flex;
-    justify-content: center;
+button {
+    display: inline-block;
+    width: 250px; /* Ancho fijo */
+    height: 60px; /* Alto fijo */
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 60px; /* Centra el texto verticalmente */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+.container-form{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-gap: 50px;
+    margin-top: 90px;
+    margin-bottom: 50px;
+  }
+
+aside{
+    text-align: center;
+}
+
+aside button{
+    display: block;
+    margin: 10px auto;  
 }
