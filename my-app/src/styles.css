@@ -1,13 +1,10 @@
-/* Aquí se corrige el color de los enlaces de navegación */
+/* Navbar */
+
 .navbar-nav .nav-link {
     color: #136871;
 }
 
-/* Se elimina la clase bg-color y se aplica el color de fondo directamente en el estilo del nav */
-/* Si deseas cambiar el color, modifica directamente el valor de background-color */
-.navigation-bar {
-    background-color: #FDDFDB;
-}
+/* Text */
 
 .title1 {
     text-align: center;
@@ -19,12 +16,26 @@ p {
     line-height: 2;
 }
 
+/* Jumbotron */
+
+.jumbotron-container {
+    background-color: #FDDFDB;
+    padding: 30px;
+    margin-bottom: 60px;
+}
+
+#jumbotron-image {
+    max-width: 580px;
+}
+
 @media (max-width: 768px) {
     #jumbotron-image {
         width: 380px;
         height: auto;
     }
 }
+
+/* Carousel */
 
 .carousel-container {
     padding-top: 50px;
@@ -49,6 +60,14 @@ label {
     margin-bottom: 10px;
 }
 
+/* Scroll bar */
+
+/* Se elimina la clase bg-color y se aplica el color de fondo directamente en el estilo del nav */
+/* Si deseas cambiar el color, modifica directamente el valor de background-color */
+.navigation-bar {
+    background-color: #FDDFDB;
+}
+
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -63,7 +82,8 @@ label {
     background-color: #FDDFDB;
 }
 
-/* Estilo para el footer */
+/* Footer */
+
 footer {
     background-color: #FDDFDB;
     /* Color de fondo del footer */
