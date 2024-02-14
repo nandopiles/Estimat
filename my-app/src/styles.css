@@ -40,14 +40,10 @@ p {
     object-fit: cover;
 }
 
-.row {}
-
 .col-6,
 .col-12 {
     margin-top: 20px;
 }
-
-
 
 label {
     margin-bottom: 10px;
@@ -65,4 +61,27 @@ label {
 
 ::-webkit-scrollbar-track {
     background-color: #FDDFDB;
+}
+
+/* Estilo para el footer */
+footer {
+    background-color: #FDDFDB;
+    /* Color de fondo del footer */
+    color: black;
+    /* Color del texto del footer */
+    padding: 20px;
+    /* Espaciado interno del footer */
+    text-align: center;
+    /* Alineación del texto al centro */
+    align-items: center;
+    
+}
+
+#pie{
+    align-items: center;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+    /* Espacio entre secciones */
 }
