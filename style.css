@@ -14,7 +14,7 @@ h1 {
     margin-top: 30px;
 }
 
-p{
+p {
     margin: 30px;
     line-height: 2;
 }
@@ -40,30 +40,48 @@ p{
     object-fit: cover;
 }
 
-.row{
-    
-}
-
-.col-6, .col-12{
+.col-6,
+.col-12 {
     margin-top: 20px;
 }
 
-
-
-label{
+label {
     margin-bottom: 10px;
 }
 
 ::-webkit-scrollbar {
-    width: 5px; 
+    width: 5px;
 }
 
 /* Estilo para el pulgar de la barra de desplazamiento (la parte que se arrastra) */
 ::-webkit-scrollbar-thumb {
     background-color: #146A6F;
-    border-radius: 4px; 
+    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-track {
     background-color: #FDDFDB;
+}
+
+/* Estilo para el footer */
+footer {
+    background-color: #FDDFDB;
+    /* Color de fondo del footer */
+    color: black;
+    /* Color del texto del footer */
+    padding: 20px;
+    /* Espaciado interno del footer */
+    text-align: center;
+    /* Alineación del texto al centro */
+    align-items: center;
+    
+}
+
+#pie{
+    align-items: center;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+    /* Espacio entre secciones */
 }
