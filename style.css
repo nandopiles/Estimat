@@ -40,14 +40,10 @@ p {
     object-fit: cover;
 }
 
-.row {}
-
 .col-6,
 .col-12 {
     margin-top: 20px;
 }
-
-
 
 label {
     margin-bottom: 10px;
@@ -67,34 +63,25 @@ label {
     background-color: #FDDFDB;
 }
 
-.profileButtons button{
- background-color: pink;
- width: 200px;
-}
-
-.userForm{
-    display: flex;
-    flex-direction: column;
+/* Estilo para el footer */
+footer {
+    background-color: #FDDFDB;
+    /* Color de fondo del footer */
+    color: black;
+    /* Color del texto del footer */
+    padding: 20px;
+    /* Espaciado interno del footer */
+    text-align: center;
+    /* Alineación del texto al centro */
     align-items: center;
-    justify-content: center;
-    height: 100px;
+    
 }
 
-.nameUser{
+#pie{
+    align-items: center;
+}
+
+.footer-section {
     margin-bottom: 20px;
-}
-
-.containerProfile {
-    display: flex;
-    align-items: center;
-}
-
-.containerProfile img {
-    margin-right: 10px;
-
-}
-
-.center{
-    display: flex;
-    justify-content: center;
+    /* Espacio entre secciones */
 }
