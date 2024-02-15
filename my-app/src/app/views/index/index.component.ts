@@ -7,7 +7,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
 @Component({
   selector: 'app-index',
   standalone: true,
-  imports: [JumbotronComponent, ImgIndexCardComponent, DescriptionIndexCardComponent, FooterComponent],
+  imports: [JumbotronComponent, ImgIndexCardComponent, DescriptionIndexCardComponent],
   templateUrl: './index.component.html',
   styleUrl: './index.component.css'
 })
