@@ -1,0 +1,65 @@
+<header>
+    <div class="row">
+        <nav class="col-md-3 d-md-block sidebar">
+            <div class="position-sticky">
+                <div class="list-group list-group-flush">
+                    <button>
+                        <a routerLink="/newsPanel" class="list-group-item list-group-item-action">Gestión de Noticias</a>
+                    </button>
+                    <button>
+                        <a href="#" class="list-group-item list-group-item-action">Gestión de Galería</a>
+                    </button>
+                    <button>
+                        <a routerLink="/userPanel" class="list-group-item list-group-item-action">Gestión de Usuarios</a>
+                    </button>
+                    <button id="lastButton">
+                        <a routerLink="/newsPanel" class="list-group-item list-group-item-action">Volver al Inicio</a>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <main class="col-md-9 ms-sm-auto col-lg-9 px-md-4 align-self-center">
+            <section id="news-section" class="row">
+                <!-- Aquí se mostrarán las noticias -->
+            </section>
+            <section id="add-news" class="mb-3">
+                <button id="insert" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addNewsModal" style="position: absolute; top: 10px; ">Insertar Noticia</button>
+            </section>
+
+        </main>
+
+        <section id="news-section">
+        <!-- Modal para agregar noticias -->
+        <div class="modal fade" id="addNewsModal" tabindex="-1" aria-labelledby="addNewsModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addNewsModalLabel">Agregar Noticia</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="news-form">
+                            <div class="mb-3">
+                                <label for="news-title" class="form-label">Título:</label>
+                                <input type="text" class="form-control" id="news-title" placeholder="Añade el título" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="news-description" class="form-label">Descripción:</label>
+                                <textarea class="form-control" id="news-description" rows="3"
+                                    required placeholder="Añade la descripción de la noticia"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="news-image-url" class="form-label" >URL de la Imagen:</label>
+                                <input type="url" class="form-control" id="news-image-url" required placeholder="Añade la URL de la imagen">
+                            </div>
+                            <button id="add" type="submit" class="btn btn-primary">Publicar Noticia</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
