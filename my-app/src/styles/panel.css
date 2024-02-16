@@ -36,7 +36,7 @@ body {
 
 /* Estilo para el último botón */
 #lastButton {
-    margin-top: 100px;
+    margin-top:5vh;
 }
 
 /* Estilo para los botones */
@@ -63,4 +63,55 @@ section {
 img {
     max-height: 100px;
     max-width: auto;
+}
+
+
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Ocultar cualquier desbordamiento de contenido */
+    margin-top: 80px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* La imagen cubre toda el área del contenedor */
+    object-position: center; /* Centrar la imagen en el contenedor */
+}
+
+.card-body {
+    padding: 16px;
+}
+
+.card-title {
+    margin-bottom: 8px;
+}
+
+.card-text {
+    color: #666;
+}
+
+#add-news {
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+
+#insert, #add {
+    background-color: #136a71;
+    color: white;
+    border: none;
+}
+
+#insert:hover, #add:hover {
+    background-color: #1a959e; /* Color de fondo cuando el mouse está encima */
+}
+
+.modal h5, .modal label {
+    color: #136a71;
+}
+
+.modal-body, .modal-header {
+    background-color: #f3f3f3;
 }
