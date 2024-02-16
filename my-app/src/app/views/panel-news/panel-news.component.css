@@ -1,0 +1,215 @@
+* {
+    font-family: helvetica;
+    font-size: 18px;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.sidebar {
+    height: 100vh;
+    background-color: #ffdfdd;
+}
+
+/* panel.css */
+.list-group-item-action {
+    margin-top: 40px;
+    background-color: #ffffff;
+    padding: 30px 0px;
+    border-radius: 15px !important;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+
+
+.list-group-item-action:hover {
+    background-color: #fcf7f7;
+    color: #136a71;
+}
+
+.list-group-item-action:active {
+    background-color: #fdf1f1;
+}
+
+
+/* Estilo para el último botón */
+#lastButton {
+    margin-top: 5vh;
+}
+
+/* Estilo para los botones */
+button {
+    border: none;
+    background: none;
+    padding: 0px 10px;
+}
+
+button:focus {
+    outline: none;
+}
+
+h1 {
+    text-align: center;
+    color: #136a71;
+    font-size: 2em;
+}
+
+section {
+    justify-content: center;
+    display: flex;
+}
+
+img {
+    max-height: 100px;
+    max-width: auto;
+}
+
+
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    /* Ocultar cualquier desbordamiento de contenido */
+    margin-top: 80px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* La imagen cubre toda el área del contenedor */
+    object-position: center;
+    /* Centrar la imagen en el contenedor */
+}
+
+.card-body {
+    padding: 16px;
+}
+
+.card-title {
+    margin-bottom: 8px;
+}
+
+.card-text {
+    color: #666;
+}
+
+#add-news {
+    margin-top: 20px;
+    /* Ajusta el margen superior según sea necesario */
+}
+
+
+#insert,
+#add {
+    background-color: #136a71;
+    color: white;
+    border: none;
+}
+
+#insert:hover,
+#add:hover {
+    background-color: #1a959e;
+    /* Color de fondo cuando el mouse está encima */
+}
+
+.modal h5,
+.modal label {
+    color: #136a71;
+}
+
+.modal-body,
+.modal-header {
+    background-color: #f3f3f3;
+}
+
+.usuarios {
+    position: fixed;
+    top: 55px;
+    /* Colocar en la parte superior */
+}
+
+.btnInsertar {
+    position: absolute;
+    top: 100px;
+    right: 60px;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: #136a71;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+tr:nth-child(2n) {
+    background-color: #f2f2f2;
+    /* Filas pares */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btnEditar {
+    background-color: #136a71;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btnEditar:hover {
+    background-color: #1a959e;
+    /* Color de fondo cuando el mouse está encima */
+}
+
+/* Estilos para el botón Eliminar */
+.btnEliminar {
+    background-color: #136a71;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btnEliminar:hover {
+    background-color: #1a959e;
+    /* Color de fondo cuando el mouse está encima */
+}
