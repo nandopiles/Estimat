@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
 import { IndexComponent } from './views/index/index.component';
-import { CancerComponent } from './components/cancer/cancer.component';
-import { NosotrosComponent } from './components/nosotros/nosotros.component';
-import { NoticiasComponent } from './components/noticias/noticias.component';
-import { GaleriaComponent } from './components/galeria/galeria.component';
+import { CancerComponent } from './views/cancer/cancer.component';
+import { NosotrosComponent } from './views/nosotros/nosotros.component';
+import { NoticiasComponent } from './views/noticias/noticias.component';
+import { GaleriaComponent } from './views/galeria/galeria.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },

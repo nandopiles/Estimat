@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from "../header/header.component";
-import { CarrouselComponent } from "../carrousel/carrousel.component";
+import { HeaderComponent } from "../../components/header/header.component";
+import { CarrouselComponent } from "../../components/carrousel/carrousel.component";
 
 @Component({
     selector: 'app-cancer',
