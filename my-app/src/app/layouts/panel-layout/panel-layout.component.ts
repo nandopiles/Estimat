@@ -3,12 +3,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-panel',
+  selector: 'app-panel-layout',
   standalone: true,
   imports: [CommonModule, RouterOutlet],
-  templateUrl: './panel.component.html',
-  styleUrl: './panel.component.css'
+  templateUrl: './panel-layout.component.html',
+  styleUrl: './panel-layout.component.css'
 })
-export class PanelComponent {
+export class PanelLayoutComponent {
 
 }
