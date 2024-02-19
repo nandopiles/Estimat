@@ -12,16 +12,6 @@ import { PanelLayoutComponent } from './layouts/panel-layout/panel-layout.compon
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 
 export const routes: Routes = [
-    /* { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home', component: IndexComponent },
-    { path: 'cancer', component: CancerComponent },
-    { path: 'about', component: NosotrosComponent },
-    { path: 'news', component: NoticiasComponent },
-    { path: 'gallery', component: GaleriaComponent },
-    { path: 'adminPanel', component: PanelAdminComponent },
-    { path: 'userPanel', component: PanelUserComponent },
-    { path: 'newsPanel', component: PanelNewsComponent } */
-
     {
         path: '',
         component: AppComponent,
