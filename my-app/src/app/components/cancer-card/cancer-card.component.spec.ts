@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ImgCancerCardComponent } from './img-cancer-card.component';
+import { CancerCardComponent } from './cancer-card.component';
 
-describe('ImgCancerCardComponent', () => {
-  let component: ImgCancerCardComponent;
-  let fixture: ComponentFixture<ImgCancerCardComponent>;
+describe('CancerCardComponent', () => {
+  let component: CancerCardComponent;
+  let fixture: ComponentFixture<CancerCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ImgCancerCardComponent]
+      imports: [CancerCardComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ImgCancerCardComponent);
+    fixture = TestBed.createComponent(CancerCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

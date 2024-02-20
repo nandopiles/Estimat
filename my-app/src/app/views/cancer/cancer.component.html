@@ -1,8 +1,5 @@
 <app-carrousel></app-carrousel>
 
 @for (card of infoCards; track $index) {
-<div class="row">
-    <app-description-cancer-card [title]="card.title" [text]="card.text"></app-description-cancer-card>
-    <app-img-cancer-card [img]="card.img"></app-img-cancer-card>
-</div>
+<app-cancer-card [infoCard]="card"></app-cancer-card>
 }

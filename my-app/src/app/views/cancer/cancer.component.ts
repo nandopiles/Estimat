@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from "../../components/header/header.component";
 import { CarrouselComponent } from "../../components/carrousel/carrousel.component";
-import { ImgCancerCardComponent } from '../../components/cancer/img-cancer-card/img-cancer-card.component';
-import { DescriptionCancerCardComponent } from '../../components/cancer/description-cancer-card/description-cancer-card.component';
 import { ICardInfo } from '../../interfaces/cardInfo.interface';
+import { CancerCardComponent } from '../../components/cancer-card/cancer-card.component';
 
 @Component({
     selector: 'app-cancer',
     standalone: true,
     templateUrl: './cancer.component.html',
     styleUrl: './cancer.component.css',
-    imports: [HeaderComponent, CarrouselComponent, DescriptionCancerCardComponent, ImgCancerCardComponent]
+    imports: [HeaderComponent, CarrouselComponent, CancerCardComponent]
 })
 export class CancerComponent {
     public infoCards: ICardInfo[] = [
