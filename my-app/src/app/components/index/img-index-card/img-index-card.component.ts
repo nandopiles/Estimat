@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ICardInfo } from '../../../interfaces/cardInfo.interface';
 
 @Component({
   selector: 'app-img-index-card',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './img-index-card.component.css'
 })
 export class ImgIndexCardComponent {
-
+  @Input() infoCard: ICardInfo = {
+    title: '',
+    text: '',
+    img: ''
+  }
 }
