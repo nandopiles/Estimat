@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-img-cancer-card',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './img-cancer-card.component.css'
 })
 export class ImgCancerCardComponent {
-
+  @Input() img: string = '/assets/img/title1.png';
 }

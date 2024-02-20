@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-description-cancer-card',
@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './description-cancer-card.component.css'
 })
 export class DescriptionCancerCardComponent {
-  public title: string = "";
-  public text: string = "";
+  @Input() title: string = '';
+  @Input() text: string = '';
 }
