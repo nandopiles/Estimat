@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\News;
 use App\Repository\NewsRepository;
+use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,6 +20,28 @@ class NewsController extends AbstractController
         ]);
     }
 
+
+    #[Route('/news{id}', name: 'app_listNews', methods: ['get'])]
+    public function listNews(ManagerRegistry $doctrine, int $id): JsonResponse {
+        $news = $doctrine->getRepository(News::class)->find($id);
+
+        if (!$news) {
+            return $this->json('news not found for id' . $id , 404);
+        }
+
+        $data = [
+            'id' => $news->getId(),
+            'title' => $news->getTitle(),
+            'description' => $news->getDescription(),
+            'image' => $news->getImage(),
+        ];
+
+        return $this->json($data);
+    }
+
+
+//LISTADO NOTICIAS
+/*
     #[Route('/listNew', name: 'app_listnew')]
     public function newsList(NewsRepository $newsRepository): JsonResponse
     {
@@ -37,4 +61,6 @@ class NewsController extends AbstractController
         // Devuelve una respuesta JSON con los datos de los usuarios
         return new JsonResponse($newData);
     }
+
+    */
 }
