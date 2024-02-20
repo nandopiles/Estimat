@@ -3,8 +3,8 @@
 }
 /* Navbar */
 
-.navbar-nav .nav-link {
-    color: #136871;
+.navbar-nav .nav-link{
+    color: #136871; /* Mantenemos el color original */
 }
 
 /* Text */
@@ -12,11 +12,22 @@
 .title1 {
     text-align: center;
     margin-top: 30px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #000000;
 }
 
 p {
     margin: 30px;
     line-height: 2;
+}
+
+.subtitle{
+    text-align: center;
+    color: grey;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
 }
 
 /* Jumbotron */
