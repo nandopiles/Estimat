@@ -20,6 +20,7 @@ class NewsController extends AbstractController
         ]);
     }
 
+    //               FIND ONE
 
     #[Route('/news{id}', name: 'app_listNews', methods: ['get'])]
     public function listNews(ManagerRegistry $doctrine, int $id): JsonResponse {
@@ -40,9 +41,9 @@ class NewsController extends AbstractController
     }
 
 
-//LISTADO NOTICIAS
-/*
-    #[Route('/listNew', name: 'app_listnew')]
+    //               FIND ALL
+
+    #[Route('/listNew', name: 'app_listAllNews')]
     public function newsList(NewsRepository $newsRepository): JsonResponse
     {
         $news = $newsRepository->findAll();
@@ -62,5 +63,5 @@ class NewsController extends AbstractController
         return new JsonResponse($newData);
     }
 
-    */
+
 }

@@ -20,6 +20,8 @@ class UserController extends AbstractController
         ]);
     }
 
+    //               FIND ONE
+    
     #[Route('/user{id}', name: 'app_listUser', methods: ['get'])]
     public function listUser(ManagerRegistry $doctrine, int $id): JsonResponse {
         $user = $doctrine->getRepository(User::class)->find($id);
@@ -41,9 +43,9 @@ class UserController extends AbstractController
     }
 
 
-//               LISTADO ANTERIOR
-    /*
-    #[Route('/list', name: 'app_listuser')]
+//               FIND ALL
+
+    #[Route('/listUser', name: 'app_listAlluser')]
     public function userList(UserRepository $userRepository): JsonResponse
     {
         $users = $userRepository->findAll();
@@ -64,5 +66,5 @@ class UserController extends AbstractController
         // Devuelve una respuesta JSON con los datos de los usuarios
         return new JsonResponse($userData);
     }
-    */
+
 }
