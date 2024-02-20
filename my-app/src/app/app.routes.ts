@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { IndexComponent } from './views/index/index.component';
 import { CancerComponent } from './views/cancer/cancer.component';
 import { NosotrosComponent } from './views/nosotros/nosotros.component';
 import { NoticiasComponent } from './views/noticias/noticias.component';
@@ -10,6 +9,7 @@ import { PanelNewsComponent } from './views/panel-news/panel-news.component';
 import { AppComponent } from './app.component';
 import { PanelLayoutComponent } from './layouts/panel-layout/panel-layout.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
+import { IndexComponent } from './views/index/index.component';
 
 export const routes: Routes = [
     {
