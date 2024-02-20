@@ -20,7 +20,7 @@ class Favs
     #[ORM\ManyToOne(inversedBy: 'favs')]
     private ?News $news = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $date = null;
 
     public function getId(): ?int
@@ -57,7 +57,7 @@ class Favs
         return $this->date;
     }
 
-    public function setDate(?\DateTimeInterface $date): static
+    public function setDate(\DateTimeInterface $date): static
     {
         $this->date = $date;
 
