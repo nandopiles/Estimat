@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-
+use App\Entity\News;
 use App\Entity\User;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -20,6 +20,8 @@ class CrudController extends AbstractController
             'controller_name' => 'CrudController',
         ]);
     }
+
+    // USUARIO
 
     #[Route('/insertUser', name: 'app_insertUser', methods: ['POST'])]
     public function insertUser(ManagerRegistry $doctrine, Request $request): JsonResponse {
@@ -92,6 +94,78 @@ class CrudController extends AbstractController
         }
 
         $entityManager->remove($user);
+        $entityManager->flush();
+
+        return $this->json('Deleted a user successfully with id' . $id);
+    }
+
+
+    // NOTICIAS
+
+
+    #[Route('/insertNews', name: 'app_insertNews', methods: ['POST'])]
+    public function insertNews(ManagerRegistry $doctrine, Request $request): JsonResponse {
+
+        $entityManager = $doctrine->getManager();
+
+        $news = new News();
+        $news->setTitle($request->request->get('title'));
+        $news->setDescription($request->request->get('description'));
+        $news->setImage($request->request->get('image'));
+
+        $entityManager->persist($news);
+        $entityManager->flush();
+
+        $data = [
+            'id' => $news->getId(),
+            'title' => $news->getTitle(),
+            'description' => $news->getDescription(),
+            'image' => $news->getImage(),
+        ];
+
+        return new JsonResponse($data);
+    }
+
+    #[Route('/updateNews{id}', name: 'app_updateNews', methods: ['put', 'patch'])]
+    public function updateNews(ManagerRegistry $doctrine, Request $request, int $id): JsonResponse {
+
+        $entityManager = $doctrine->getManager();
+
+        $news = $entityManager->getRepository(News::class)->find($id);
+
+        if (!$news) {
+            return $this->json('User not found for id' . $id , 404);
+        }
+
+        $news->setTitle($request->request->get('title'));
+        $news->setDescription($request->request->get('description'));
+        $news->setImage($request->request->get('image'));
+
+        $entityManager->flush();
+
+        $data = [
+            'id' => $news->getId(),
+            'title' => $news->getTitle(),
+            'description' => $news->getDescription(),
+            'image' => $news->getImage(),
+        ];
+
+        return $this->json($data);
+    }
+
+
+    #[Route('/deleteNews{id}', name: 'app_deleteNews', methods: ['delete'])]
+    public function deleteNews(ManagerRegistry $doctrine, int $id): JsonResponse {
+
+        $entityManager = $doctrine->getManager();
+
+        $news = $entityManager->getRepository(User::class)->find($id);
+
+        if (!$news) {
+            return $this->json('User not found for id' . $id , 404);
+        }
+
+        $entityManager->remove($news);
         $entityManager->flush();
 
         return $this->json('Deleted a user successfully with id' . $id);
