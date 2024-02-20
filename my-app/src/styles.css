@@ -7,6 +7,20 @@
     color: #136871; /* Mantenemos el color original */
 }
 
+.login-button {
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 20px;
+  }
+  
+  .login-button:hover {
+    background-color: rgb(178, 176, 176); /* Nuevo color de fondo al pasar el ratón sobre el botón */
+    border-radius: 25px;
+  }
+
 /* Text */
 
 .title1 {
