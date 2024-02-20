@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './description-index-card.component.css'
 })
 export class DescriptionIndexCardComponent {
-
+  
 }
