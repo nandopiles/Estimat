@@ -96,15 +96,6 @@ body.collapsed .hide {
   padding-top: 2rem;
 }
 
-.logo__wrapper {
-  display: flex;
-  align-items: center;
-  color: var(--text-link);
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 1.35rem;
-}
-
 .logo-small {
   height: 5rem;
   width: auto;
@@ -121,10 +112,6 @@ body.collapsed .hide {
   padding: 0.25rem;
   overflow: hidden;
   object-fit: cover;
-}
-
-.company-name {
-  white-space: nowrap;
 }
 
 /*? menu links */
