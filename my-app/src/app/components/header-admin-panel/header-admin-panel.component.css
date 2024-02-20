@@ -1,22 +1,4 @@
-:root {
-    --primary-color: #191919;
-    --primary: #408CF9;
-    --white: #FFFFFF;
-    --sidebar-hover: #F5F5F5;
-    --sidebar-bg: #ffdfdd;
-    --bg: #EFEFEF;
-    --text-link: #141B34;
-    --expand-button: #408CF9;
-    --logout: #FA7575;
-    --headline-text: #546471;
-    --text: #141B34;
-    --divider-bg: var(--bg);
-    --shadow-color: #E9E6E4;
-    --shadow: 0px 0px 0px 1.4px var(--shadow-color),
-        0px 0px 2.8px 0px var(--shadow-color);
-}
-
-body {
+/* body {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     padding: 1rem;
@@ -24,11 +6,9 @@ body {
     background: var(--bg);
 }
 
-
-
 html {
     height: 100%;
-}
+} */
 
 * {
     margin: 0;
@@ -46,15 +26,16 @@ html {
     max-width: 20rem;
     min-width: 7rem;
     display: flex;
-    color: var(--white);
+    color: #ffffff;
     flex-direction: column;
-    background-color: var(--sidebar-bg);
-    box-shadow: var(--shadow);
+    background-color: #ffdfdd;
+    box-shadow: 0px 0px 0px 1.4px #E9E6E4,
+        0px 0px 2.8px 0px #E9E6E4;
     transition: max-width 0.2s ease-in-out;
 }
 
 .sidebar h2 {
-    color: var(--headline-text);
+    color: #546471;
     font-size: 1rem;
     margin-top: 1rem;
     line-height: 1.5rem;
@@ -99,7 +80,7 @@ body.collapsed .hide {
 .logo__wrapper {
     display: flex;
     align-items: center;
-    color: var(--text-link);
+    color: #141B34;
     font-weight: 700;
     text-decoration: none;
     font-size: 1.35rem;
@@ -148,23 +129,23 @@ body.collapsed .sidebar-links-wrapper {
 }
 
 .sidebar-links li {
-    color: var(--text-link);
+    color: #141B34;
     min-width: 3rem;
 }
 
 .sidebar-links li svg {
-    stroke: var(--text-link);
+    stroke: #141B34;
     width: 1.75rem;
     height: 1.75rem;
     min-width: 1.75rem;
 }
 
 .sidebar-links li a:hover {
-    background: var(--sidebar-hover);
+    background-color: #F5F5F5;
 }
 
 .sidebar-links li a {
-    color: var(--text-link);
+    color: #141B34;
     width: 100%;
     padding: 0 0.6rem;
     font-size: 1.25rem;
@@ -183,9 +164,9 @@ body.collapsed .sidebar-links-wrapper {
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
     font-size: 0.75rem;
-    background: var(--sidebar-hover);
-    color: var(--text-link);
-    border: 1px solid var(--shadow-color);
+    background-color: #F5F5F5;
+    color: #141B34;
+    border: 1px solid #E9E6E4;
 }
 
 .sidebar-links li a .link {
@@ -195,17 +176,17 @@ body.collapsed .sidebar-links-wrapper {
 }
 
 .sidebar-links .active:hover {
-    background: var(--sidebar-hover);
+    background-color: #F5F5F5;
 }
 
 .sidebar-links .active {
     text-decoration: none;
-    background: var(--sidebar-hover);
-    color: var(--text-link);
+    background-color: #F5F5F5;
+    color: #141B34;
 }
 
 .sidebar-links .active svg {
-    stroke: var(--text-link);
+    stroke: #141B34;
 }
 
 .divider {
@@ -215,7 +196,7 @@ body.collapsed .sidebar-links-wrapper {
 body.collapsed .divider {
     width: 100%;
     display: block;
-    background: var(--divider-bg);
+    background: #EFEFEF;
     height: 2px;
     margin: 0.5rem 0;
 }
@@ -227,7 +208,7 @@ body.collapsed .divider {
     align-items: center;
     gap: 0.75rem;
     flex-direction: row;
-    color: var(--text-link);
+    color: #141B34;
     overflow: hidden;
     min-height: 4rem;
     margin-top: auto;
@@ -256,11 +237,11 @@ body.collapsed .divider {
 .user-name {
     font-weight: 600;
     text-align: left;
-    color: var(--text-link);
+    color: #141B34;
 }
 
 .email {
-    color: var(--text-link);
+    color: #141B34;
     font-size: 0.8rem;
 }
 
@@ -275,7 +256,7 @@ body.collapsed .divider {
 .sidebar__profile .menu:hover {
     padding: 0.5rem;
     border-radius: 50%;
-    background: var(--sidebar-hover);
+    background-color: #F5F5F5;
 }
 
 /*? Expand button */
@@ -284,9 +265,10 @@ body.collapsed .divider {
     display: grid;
     place-items: center;
     cursor: pointer;
-    background: var(--sidebar-bg);
+    background-color: #ffdfdd;
     z-index: 2;
-    box-shadow: var(--shadow);
+    box-shadow: 0px 0px 0px 1.4px #E9E6E4,
+        0px 0px 2.8px 0px #E9E6E4;
     right: -1.2rem;
     top: 1.40rem;
     width: 2rem;
@@ -297,7 +279,7 @@ body.collapsed .divider {
 
 .expand-btn svg {
     transform: rotate(-180deg);
-    stroke: var(--text-link);
+    stroke: #141B34;
     width: 1.25rem;
     height: 1.25rem;
 }
