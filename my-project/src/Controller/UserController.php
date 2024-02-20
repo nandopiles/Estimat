@@ -21,8 +21,8 @@ class UserController extends AbstractController
     }
 
     //               FIND ONE
-    
-    #[Route('/user{id}', name: 'app_listUser', methods: ['get'])]
+
+    #[Route('/list/user/{id}', name: 'app_listUser', methods: ['get'])]
     public function listUser(ManagerRegistry $doctrine, int $id): JsonResponse {
         $user = $doctrine->getRepository(User::class)->find($id);
 
@@ -45,7 +45,7 @@ class UserController extends AbstractController
 
 //               FIND ALL
 
-    #[Route('/listUser', name: 'app_listAlluser')]
+    #[Route('/list/users', name: 'app_listAlluser')]
     public function userList(UserRepository $userRepository): JsonResponse
     {
         $users = $userRepository->findAll();

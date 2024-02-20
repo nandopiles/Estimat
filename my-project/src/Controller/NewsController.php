@@ -22,7 +22,7 @@ class NewsController extends AbstractController
 
     //               FIND ONE
 
-    #[Route('/news{id}', name: 'app_listNews', methods: ['get'])]
+    #[Route('/list/new/{id}', name: 'app_listNews', methods: ['get'])]
     public function listNews(ManagerRegistry $doctrine, int $id): JsonResponse {
         $news = $doctrine->getRepository(News::class)->find($id);
 
@@ -43,7 +43,7 @@ class NewsController extends AbstractController
 
     //               FIND ALL
 
-    #[Route('/listNew', name: 'app_listAllNews')]
+    #[Route('/list/news', name: 'app_listAllNews')]
     public function newsList(NewsRepository $newsRepository): JsonResponse
     {
         $news = $newsRepository->findAll();
