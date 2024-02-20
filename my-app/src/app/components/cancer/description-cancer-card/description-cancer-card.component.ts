@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './description-cancer-card.component.css'
 })
 export class DescriptionCancerCardComponent {
-
+  public title: string = "";
+  public text: string = "";
 }
