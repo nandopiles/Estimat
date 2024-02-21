@@ -1,7 +1,9 @@
 <?php
 
+// Namespace to organize classes in the application
 namespace App\Controller;
 
+// Necessary imports to use classes and methods
 use App\Entity\News;
 use App\Entity\User;
 use Doctrine\Persistence\ManagerRegistry;
@@ -11,8 +13,11 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+// Class definition that extends AbstractController
 class CrudController extends AbstractController
 {
+
+    // Method to handle the '/crud' route
     #[Route('/crud', name: 'app_crud')]
     public function index(): Response
     {
@@ -21,23 +26,27 @@ class CrudController extends AbstractController
         ]);
     }
 
-    // USUARIO
-
+    // Methods related to user management
     #[Route('/insert/user', name: 'app_insertUser', methods: ['POST'])]
+    // Method to insert a new user
     public function insertUser(ManagerRegistry $doctrine, Request $request): JsonResponse {
 
         $entityManager = $doctrine->getManager();
+        // Create a new instance of the User entity
 
         $user = new User();
+        // Set user data based on the received request
         $user->setName($request->request->get('name'));
         $user->setPassword($request->request->get('password'));
         $user->setEmail($request->request->get('email'));
         $user->setStatus($request->request->get('status'));
         $user->setRole($request->request->get('role'));
 
+        // Persist the user to the database
         $entityManager->persist($user);
         $entityManager->flush();
 
+        // Create a response with the newly created user data
         $data = [
             'id' => $user->getId(),
             'name' => $user->getName(),
