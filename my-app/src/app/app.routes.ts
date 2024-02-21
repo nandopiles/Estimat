@@ -10,6 +10,7 @@ import { IndexComponent } from './views/index/index.component';
 import { PanelNewsComponent } from './views/panel-news/panel-news.component';
 import { PanelUserComponent } from './views/panel-user/panel-user.component';
 import { PerfilComponent } from './views/perfil/perfil.component';
+import { ProfileLayoutComponent } from './layouts/profile-layout/profile-layout.component';
 
 export const routes: Routes = [
     {
@@ -32,11 +33,14 @@ export const routes: Routes = [
             { path: 'adminHome', component: PanelAdminComponent },
             { path: 'newsManagement', component: PanelNewsComponent },
             { path: 'usersManagement', component: PanelUserComponent },
-            // { path: 'profile', component: PerfilComponent }
         ]
     },
-    /* {
+    {
         path: '',
-        component: 
-    } */
+        component: ProfileLayoutComponent,
+        children: [
+            { path: '', redirectTo: 'profile', pathMatch: 'full' },
+            { path: 'profile', component: PerfilComponent }
+        ]
+    }
 ];

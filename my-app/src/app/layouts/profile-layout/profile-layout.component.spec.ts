@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PanelProfileComponent } from './panel-profile.component';
+import { ProfileLayoutComponent } from './profile-layout.component';
 
-describe('PanelProfileComponent', () => {
-  let component: PanelProfileComponent;
-  let fixture: ComponentFixture<PanelProfileComponent>;
+describe('ProfileLayoutComponent', () => {
+  let component: ProfileLayoutComponent;
+  let fixture: ComponentFixture<ProfileLayoutComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PanelProfileComponent]
+      imports: [ProfileLayoutComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(PanelProfileComponent);
+    fixture = TestBed.createComponent(ProfileLayoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
