@@ -10,6 +10,7 @@ import { PanelNewsComponent } from './views/panel-news/panel-news.component';
 import { AppComponent } from './app.component';
 import { PanelLayoutComponent } from './layouts/panel-layout/panel-layout.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
+import { PerfilComponent } from './views/perfil/perfil.component';
 
 export const routes: Routes = [
     {
@@ -26,6 +27,7 @@ export const routes: Routes = [
                     { path: 'about', component: NosotrosComponent },
                     { path: 'news', component: NoticiasComponent },
                     { path: 'gallery', component: GaleriaComponent },
+                    { path: 'profile', component: PerfilComponent },
                 ]
             },
             {
