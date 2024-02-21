@@ -150,23 +150,30 @@ class CrudController extends AbstractController
         return new JsonResponse($data);
     }
 
+
+    // Method to update an existing news
     #[Route('/update/news/{id}', name: 'app_updateNews', methods: ['put', 'patch'])]
     public function updateNews(ManagerRegistry $doctrine, Request $request, int $id): JsonResponse {
 
         $entityManager = $doctrine->getManager();
 
+        // Find the news by its ID in the database
         $news = $entityManager->getRepository(News::class)->find($id);
 
+        // Check if the news exists
         if (!$news) {
             return $this->json('User not found for id' . $id , 404);
         }
 
+        // Update news data based on the received request
         $news->setTitle($request->request->get('title'));
         $news->setDescription($request->request->get('description'));
         $news->setImage($request->request->get('image'));
 
+        // Save the changes to the database
         $entityManager->flush();
 
+        // Create a response with the updated news data
         $data = [
             'id' => $news->getId(),
             'title' => $news->getTitle(),
