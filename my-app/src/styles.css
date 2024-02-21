@@ -6,6 +6,22 @@
 
 .navbar-nav .nav-link {
     color: #136871;
+    /* Mantenemos el color original */
+}
+
+.login-button {
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 20px;
+}
+
+.login-button:hover {
+    background-color: rgb(178, 176, 176);
+    /* Nuevo color de fondo al pasar el ratón sobre el botón */
+    border-radius: 25px;
 }
 
 /* Text */
@@ -13,11 +29,22 @@
 .title1 {
     text-align: center;
     margin-top: 30px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #000000;
 }
 
 p {
     margin: 30px;
     line-height: 2;
+}
+
+.subtitle {
+    text-align: center;
+    color: grey;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
 }
 
 /* Jumbotron */
@@ -74,6 +101,7 @@ label {
 
 ::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
 }
 
 /* Estilo para el pulgar de la barra de desplazamiento (la parte que se arrastra) */

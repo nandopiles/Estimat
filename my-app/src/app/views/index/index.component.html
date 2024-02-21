@@ -4,11 +4,13 @@
     </div>
 </div>
 
+@for (card of infoCards; track $index) {
 <div class="row">
     <div class="col-sm-12 col-md-5 offset-1">
-        <app-description-index-card></app-description-index-card>
+        <app-description-index-card [infoCard]="card"></app-description-index-card>
     </div>
     <div class="col-sm-12 col-md-6">
-        <app-img-index-card></app-img-index-card>
+        <app-img-index-card [infoCard]="card"></app-img-index-card>
     </div>
 </div>
+}
