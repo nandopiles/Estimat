@@ -119,22 +119,27 @@ class CrudController extends AbstractController
     }
 
 
-    // NOTICIAS
+    // Methods related to news management
 
-
+    // Method to insert a new news
     #[Route('/insert/news', name: 'app_insertNews', methods: ['POST'])]
     public function insertNews(ManagerRegistry $doctrine, Request $request): JsonResponse {
 
         $entityManager = $doctrine->getManager();
 
+        // Create a new instance of the News entity
         $news = new News();
+
+        // Set news data based on the received request
         $news->setTitle($request->request->get('title'));
         $news->setDescription($request->request->get('description'));
         $news->setImage($request->request->get('image'));
 
+        // Persist the news to the database
         $entityManager->persist($news);
         $entityManager->flush();
 
+        // Create a response with the newly created news data
         $data = [
             'id' => $news->getId(),
             'title' => $news->getTitle(),
