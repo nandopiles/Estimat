@@ -1,10 +1,11 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
+import { HeaderProfileComponent } from '../../components/header-profile/header-profile.component';
 
 @Component({
   selector: 'app-perfil',
   standalone: true,
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, HeaderProfileComponent],
   templateUrl: './perfil.component.html',
   styleUrl: './perfil.component.css'
 })
