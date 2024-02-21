@@ -185,20 +185,25 @@ class CrudController extends AbstractController
     }
 
 
+    // Method to delete a news
     #[Route('/delete/news/{id}', name: 'app_deleteNews', methods: ['delete'])]
     public function deleteNews(ManagerRegistry $doctrine, int $id): JsonResponse {
 
         $entityManager = $doctrine->getManager();
 
+        // Find the news by its ID in the database
         $news = $entityManager->getRepository(User::class)->find($id);
 
+        // Check if the news exists
         if (!$news) {
             return $this->json('User not found for id' . $id , 404);
         }
 
+        // Remove the news from the database
         $entityManager->remove($news);
         $entityManager->flush();
 
+        // Create a response indicating that the news has been successfully deleted
         return $this->json('Deleted a user successfully with id' . $id);
     }
 
