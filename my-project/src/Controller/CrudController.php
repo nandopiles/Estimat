@@ -96,21 +96,25 @@ class CrudController extends AbstractController
         return $this->json($data);
     }
 
-    //Borrar usuario
+    // Method to delete a user
     #[Route('/delete/user/{id}', name: 'app_deleteUser', methods: ['delete'])]
     public function deleteUser(ManagerRegistry $doctrine, int $id): JsonResponse {
 
         $entityManager = $doctrine->getManager();
 
+        // Find the user by its ID in the database
         $user = $entityManager->getRepository(User::class)->find($id);
 
+        // Check if the user exists
         if (!$user) {
             return $this->json('User not found for id' . $id , 404);
         }
 
+        // Remove the user from the database
         $entityManager->remove($user);
         $entityManager->flush();
 
+        // Create a response indicating that the user has been successfully deleted
         return $this->json('Deleted a user successfully with id' . $id);
     }
 
