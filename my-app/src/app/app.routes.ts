@@ -9,9 +9,9 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
 import { IndexComponent } from './views/index/index.component';
 import { PanelNewsComponent } from './views/panel-news/panel-news.component';
 import { PanelUserComponent } from './views/panel-user/panel-user.component';
+import { PerfilComponent } from './views/perfil/perfil.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
     {
         path: '',
         component: MainLayoutComponent,
@@ -31,7 +31,12 @@ export const routes: Routes = [
             { path: '', redirectTo: 'adminHome', pathMatch: 'full' },
             { path: 'adminHome', component: PanelAdminComponent },
             { path: 'newsManagement', component: PanelNewsComponent },
-            { path: 'usersManagement', component: PanelUserComponent }
+            { path: 'usersManagement', component: PanelUserComponent },
+            // { path: 'profile', component: PerfilComponent }
         ]
-    }
+    },
+    /* {
+        path: '',
+        component: 
+    } */
 ];
