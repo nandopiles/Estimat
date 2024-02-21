@@ -213,7 +213,7 @@
 }
 
 .icon-tabler-user-circle {
-    margin-top: 15vh;
+    margin-top: 10vh;
     width: 100px;
     height: 100px;
     color: black;
@@ -221,7 +221,7 @@
 }
 
 #userData {
-    margin-top: 20vh;
+    margin-top: 12vh;
     margin-left: 10vh;
 
 }
@@ -230,19 +230,20 @@
     color: #116B70;
 }
 
-#userData>h4 {
+form>h4 {
     color: #116B70;
     margin-top: 3vh;
     margin-bottom: 3vh;
 }
 
-input{
+input {
     border: 3px solid #ffdfdd;
     height: 30px;
     font-size: 21px;
 }
 
-#btnPass{
+#btnNewPass,
+#btnRepeatPass {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -253,7 +254,19 @@ input{
     font-size: 21px;
 }
 
-#btnPass:hover{
+#btnEnv {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border: 3px solid #ffdfdd;
+    width: 200px;
+    height: 30px;
+    font-size: 17px;
+}
+
+#btnNewPass:hover,
+#btnRepeatPass:hover,
+#btnEnv:hover {
     background-color: #ffdfdd;
     color: black;
 }
