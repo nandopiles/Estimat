@@ -1,7 +1,8 @@
-# Estima't
-<h2> Sobre el proyecto </h2>
-Hemos llevado a cabo una profunda renovación de la página web de la Asociación Estima't, con el objetivo de hacerla más interactiva y mantenerla constantemente actualizada, brindando así una plataforma más dinámica y accesible para los usuarios.
-Decidimos colaborar con esta asociacion ya que creemos que es un tema que necesita mas visibilidad y apoyo por parte de la sociedad.
+
+![Logo](my-app/src/assets/img/logo.png)
+
+
+Hemos llevado a cabo una profunda renovación de la página web de la Asociación Estima't, con el objetivo de hacerla más interactiva y mantenerla constantemente actualizada, brindando así una plataforma más dinámica y accesible para los usuarios. Decidimos colaborar con esta asociacion ya que creemos que es un tema que necesita mas visibilidad y apoyo por parte de la sociedad.
 
 <h2> How does it work?</h2>
 La página web se compone de diversos apartados, que abarcan desde información detallada sobre la enfermedad y la labor de la asociación, hasta noticias relevantes y galerías de imágenes que muestran las actividades como asambleas y talleres organizados por la misma. Además, cuenta con una plataforma interna que facilita la gestión eficiente de todo el contenido.
@@ -13,4 +14,29 @@ En nuestro sitio web, hemos habilitado un apartado de contacto que ofrece a los 
 <h2> Funcionamiento Técnico </h2>
 El proyecto se ha dividido en dos partes distintas: el front-end, desarrollado en Angular, y el back-end, implementado utilizando Symfony y MySQL. Para facilitar la gestión y la portabilidad del proyecto, hemos optado por utilizar imágenes y contenedores de Docker. Esta decisión nos permite mantener un entorno de desarrollo y despliegue consistente y reproducible, lo que simplifica la colaboración entre desarrolladores y asegura una mayor consistencia en el funcionamiento del sistema en diferentes entornos.
 
-<h1> GUIA DE USO DE LA APLICACIÓN </h1>
+
+## Guia de Uso
+
+- Descargamos el .ZIP y nos posicionamos en la carpeta `my-project`, después levantamos por comando nuestro contenedor de Docker
+```bash
+  cd my-project
+  docker-compose up -d
+```
+- Una vez tengamos levantado el contenedor, nos desplazamos a la carpeta `my-app`e instalamos angular
+```bash
+  cd my-app
+  nmp install
+```
+- Cuando ya tengamos todo instalado, levantamos el servidor para poder visualizar el proyecto.
+```bash
+ng serve
+```
+- Este comando nos llevara al navegador y podremos acceder a la aplicación
+## Authors
+
+- [@Nando](https://www.github.com/nandopiles)
+- [@Aika](https://www.github.com/aikarubi)
+- [@Eva](https://www.github.com/evpebe)
+- [@Moisés](https://www.github.com/mojial)
+- [@Jesús](https://www.github.com/jgarcia311999)
+
