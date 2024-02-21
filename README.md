@@ -1,5 +1,8 @@
 
-![Logo](my-app/src/assets/img/logo.png)
+<p align="center">
+  <img src="my-app/src/assets/img/logo.png" alt="Logo">
+</p>
+
 
 
 Hemos llevado a cabo una profunda renovación de la página web de la Asociación Estima't, con el objetivo de hacerla más interactiva y mantenerla constantemente actualizada, brindando así una plataforma más dinámica y accesible para los usuarios. Decidimos colaborar con esta asociacion ya que creemos que es un tema que necesita mas visibilidad y apoyo por parte de la sociedad.
@@ -25,7 +28,8 @@ El proyecto se ha dividido en dos partes distintas: el front-end, desarrollado e
 - Una vez tengamos levantado el contenedor, nos desplazamos a la carpeta `my-app`e instalamos angular
 ```bash
   cd my-app
-  nmp install
+  npm install
+  port: 4200
 ```
 - Cuando ya tengamos todo instalado, levantamos el servidor para poder visualizar el proyecto.
 ```bash
