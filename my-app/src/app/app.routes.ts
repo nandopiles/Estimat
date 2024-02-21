@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { PanelLayoutComponent } from './layouts/panel-layout/panel-layout.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { IndexComponent } from './views/index/index.component';
+import { PanelGalleryComponent } from './views/panel-gallery/panel-gallery.component';
 
 export const routes: Routes = [
     {
@@ -47,6 +48,13 @@ export const routes: Routes = [
                 component: PanelLayoutComponent,
                 children: [
                     { path: '', component: PanelNewsComponent },
+                ]
+            },
+            {
+                path: 'galleryPanel',
+                component: PanelLayoutComponent,
+                children: [
+                    { path: '', component: PanelGalleryComponent},
                 ]
             }
         ]

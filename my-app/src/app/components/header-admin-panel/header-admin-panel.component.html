@@ -2,7 +2,7 @@
     <div class="sidebar-top-wrapper">
         <div class="sidebar-top">
             <a href="#" class="logo__wrapper">
-                <img src="assets/img/logo.png" alt="Logo" class="logo-big" id="logo">
+                <img routerLink="/home" src="assets/img/logo.png" alt="Logo" class="logo-big" id="logo">
             </a>
         </div>
         
@@ -28,7 +28,7 @@
                 </li>
             </ul>
 
-            <h2 id="linkPanel">— Administración —</h2>
+            <h2 id="linkPanel" routerLink="/adminPanel">— Administración —</h2>
             <div class="divider"></div>
             <ul>
                 <li>
@@ -43,7 +43,7 @@
                             <path d="M8 12l4 0" />
                             <path d="M8 16l4 0" />
                         </svg>
-                        <span class="link hide">Noticias</span>
+                        <span class="link hide" routerLink="/newsPanel">Noticias</span>
                     </a>
                 </li>
                 <li>
@@ -58,7 +58,7 @@
                             <path d="M14 14l1 -1c.31 -.298 .644 -.497 .987 -.596" />
                             <path d="M18.42 15.61a2.1 2.1 0 0 1 2.97 2.97l-3.39 3.42h-3v-3l3.42 -3.39z" />
                         </svg>
-                        <span class="link hide">Galeria</span>
+                        <span class="link hide" routerLink="/galleryPanel">Galeria</span>
                     </a>
                 </li>
                 <li>
@@ -86,7 +86,7 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        <span class="link hide">Usuarios</span>
+                        <span class="link hide" routerLink="/userPanel">Usuarios</span>
                     </a>
                 </li>
             </ul>
