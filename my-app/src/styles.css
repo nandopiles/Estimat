@@ -1,6 +1,7 @@
 * {
     font-family: Helvetica;
 }
+
 /* Navbar */
 
 .navbar-nav .nav-link{
@@ -132,17 +133,5 @@ footer {
 .footer-section {
     margin-bottom: 20px;
     /* Espacio entre secciones */
-}
-
-.about-image {
-    margin: 0 auto;
-    text-align: center;
-    margin-top: -80px;
-}
-
-.about-image img {
-    max-width: 600px;
-    display: block;
-    margin: 0 auto;
 }
 
