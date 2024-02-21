@@ -1,0 +1,72 @@
+.icon-tabler-user-circle {
+    margin-top: 10vh;
+    width: 100px;
+    height: 100px;
+    color: #116B70;
+
+}
+
+#userData {
+    margin-top: 12vh;
+    margin-left: 10vh;
+
+}
+
+#userData h1:first-of-type {
+    color: #116B70;
+}
+
+form>h4 {
+    color: #116B70;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+input {
+    border: 3px solid #ffdfdd;
+    height: 30px;
+    font-size: 21px;
+}
+
+#btnNewPass,
+#btnRepeatPass {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border: 3px solid #ffdfdd;
+    border-left: 0px;
+    width: 50px;
+    height: 30px;
+    font-size: 21px;
+}
+
+#btnEnv {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border: 3px solid #ffdfdd;
+    width: 200px;
+    height: 30px;
+    font-size: 17px;
+}
+
+#btnNewPass:hover,
+#btnRepeatPass:hover,
+#btnEnv:hover {
+    background-color: #ffdfdd;
+    color: black;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        width: 4rem;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        width: 100%;
+    }
+}
