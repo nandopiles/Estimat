@@ -59,25 +59,31 @@ class CrudController extends AbstractController
         return new JsonResponse($data);
     }
 
+    // Method to update an existing user
     #[Route('/update/user/{id}', name: 'app_updateUser', methods: ['put', 'patch'])]
     public function updateUser(ManagerRegistry $doctrine, Request $request, int $id): JsonResponse {
 
         $entityManager = $doctrine->getManager();
 
+        // Find the user by its ID in the database
         $user = $entityManager->getRepository(User::class)->find($id);
 
+        // Check if the user exists
         if (!$user) {
             return $this->json('User not found for id' . $id , 404);
         }
 
+        // Update user data based on the received request
         $user->setName($request->request->get('name'));
         $user->setPassword($request->request->get('password'));
         $user->setEmail($request->request->get('email'));
         $user->setStatus($request->request->get('status'));
         $user->setRole($request->request->get('role'));
 
+        // Save the changes to the database
         $entityManager->flush();
 
+        // Create a response with the updated user data
         $data = [
             'id' => $user->getId(),
             'name' => $user->getName(),
