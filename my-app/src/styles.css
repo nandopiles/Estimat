@@ -4,8 +4,9 @@
 
 /* Navbar */
 
-.navbar-nav .nav-link{
-    color: #136871; /* Mantenemos el color original */
+.navbar-nav .nav-link {
+    color: #136871;
+    /* Mantenemos el color original */
 }
 
 .login-button {
@@ -15,12 +16,13 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-right: 20px;
-  }
-  
-  .login-button:hover {
-    background-color: rgb(178, 176, 176); /* Nuevo color de fondo al pasar el ratón sobre el botón */
+}
+
+.login-button:hover {
+    background-color: rgb(178, 176, 176);
+    /* Nuevo color de fondo al pasar el ratón sobre el botón */
     border-radius: 25px;
-  }
+}
 
 /* Text */
 
@@ -37,7 +39,7 @@ p {
     line-height: 2;
 }
 
-.subtitle{
+.subtitle {
     text-align: center;
     color: grey;
     font-size: 18px;
@@ -99,6 +101,7 @@ label {
 
 ::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
 }
 
 /* Estilo para el pulgar de la barra de desplazamiento (la parte que se arrastra) */
@@ -134,4 +137,3 @@ footer {
     margin-bottom: 20px;
     /* Espacio entre secciones */
 }
-

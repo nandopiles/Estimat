@@ -1,0 +1,11 @@
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 40px;
+}
+
+img {
+    max-width: 800px;
+    height: auto;
+}
