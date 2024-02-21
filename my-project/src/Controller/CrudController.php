@@ -81,7 +81,7 @@ class CrudController extends AbstractController
         return $this->json($data);
     }
 
-
+    //Borrar usuario
     #[Route('/delete/user/{id}', name: 'app_deleteUser', methods: ['delete'])]
     public function deleteUser(ManagerRegistry $doctrine, int $id): JsonResponse {
 
