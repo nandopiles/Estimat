@@ -23,7 +23,7 @@ class CrudController extends AbstractController
 
     // USUARIO
 
-    #[Route('/insertUser', name: 'app_insertUser', methods: ['POST'])]
+    #[Route('/insert/user', name: 'app_insertUser', methods: ['POST'])]
     public function insertUser(ManagerRegistry $doctrine, Request $request): JsonResponse {
 
         $entityManager = $doctrine->getManager();
@@ -50,7 +50,7 @@ class CrudController extends AbstractController
         return new JsonResponse($data);
     }
 
-    #[Route('/updateUser{id}', name: 'app_updateUser', methods: ['put', 'patch'])]
+    #[Route('/update/user/{id}', name: 'app_updateUser', methods: ['put', 'patch'])]
     public function updateUser(ManagerRegistry $doctrine, Request $request, int $id): JsonResponse {
 
         $entityManager = $doctrine->getManager();
@@ -82,7 +82,7 @@ class CrudController extends AbstractController
     }
 
 
-    #[Route('/deleteUser{id}', name: 'app_deleteUser', methods: ['delete'])]
+    #[Route('/delete/user/{id}', name: 'app_deleteUser', methods: ['delete'])]
     public function deleteUser(ManagerRegistry $doctrine, int $id): JsonResponse {
 
         $entityManager = $doctrine->getManager();
@@ -103,7 +103,7 @@ class CrudController extends AbstractController
     // NOTICIAS
 
 
-    #[Route('/insertNews', name: 'app_insertNews', methods: ['POST'])]
+    #[Route('/insert/news', name: 'app_insertNews', methods: ['POST'])]
     public function insertNews(ManagerRegistry $doctrine, Request $request): JsonResponse {
 
         $entityManager = $doctrine->getManager();
@@ -126,7 +126,7 @@ class CrudController extends AbstractController
         return new JsonResponse($data);
     }
 
-    #[Route('/updateNews{id}', name: 'app_updateNews', methods: ['put', 'patch'])]
+    #[Route('/update/news/{id}', name: 'app_updateNews', methods: ['put', 'patch'])]
     public function updateNews(ManagerRegistry $doctrine, Request $request, int $id): JsonResponse {
 
         $entityManager = $doctrine->getManager();
@@ -154,7 +154,7 @@ class CrudController extends AbstractController
     }
 
 
-    #[Route('/deleteNews{id}', name: 'app_deleteNews', methods: ['delete'])]
+    #[Route('/delete/news/{id}', name: 'app_deleteNews', methods: ['delete'])]
     public function deleteNews(ManagerRegistry $doctrine, int $id): JsonResponse {
 
         $entityManager = $doctrine->getManager();
