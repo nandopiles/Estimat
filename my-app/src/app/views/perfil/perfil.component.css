@@ -12,6 +12,10 @@
 
 }
 
+.row {
+    margin-top: -60px;
+}
+
 #userData h1:first-of-type {
     color: #116B70;
 }
