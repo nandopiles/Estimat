@@ -133,6 +133,10 @@ footer {
     opacity: 0.4;
 }
 
+.copyright {
+color: gray;
+}
+
 #pie {
     align-items: center;
 }
