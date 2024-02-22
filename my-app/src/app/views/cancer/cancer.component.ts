@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from "../../components/header/header.component";
 import { CarrouselComponent } from "../../components/carrousel/carrousel.component";
-import { ICardInfo } from '../../interfaces/cardInfo.interface';
+import { ICardInfo } from '../../interfaces/estimat.interface';
 import { CancerCardComponent } from '../../components/cancer-card/cancer-card.component';
 
 @Component({

@@ -4,7 +4,7 @@ export interface ICardInfo {
     img: string;
 }
 
-export interface User{
+export interface User {
     idUser: number;
     name: string;
     password: string;
@@ -13,16 +13,16 @@ export interface User{
     role: string;
 }
 
-export interface Favs{
+export interface Favs {
     user: User;
-    new: News;
+    new: INews;
     users: string;
     date: Date;
 }
 
-export interface News{
-    idNews: number;
+export interface INews {
+    id: number;
     title: string;
     description: string;
-    photo: string;
+    image: string;
 }
