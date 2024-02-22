@@ -1,41 +1,41 @@
-
 <p align="center">
   <img src="my-app/src/assets/img/logo.png" alt="Logo">
 </p>
 
+We have carried out a profound renovation of the Estima't Association's website, with the aim of making it more interactive and keeping it constantly updated, thus providing a more dynamic and accessible platform for users. We decided to collaborate with this association because we believe it is a topic that needs more visibility and support from society. 
 
+<h2>How does it work?</h2>
+The website consists of various sections, ranging from detailed information about the disease and the association's work, to relevant news and image galleries showcasing activities such as assemblies and workshops organized by the association. Additionally, it features an internal platform that facilitates efficient management of all content.
 
-Hemos llevado a cabo una profunda renovación de la página web de la Asociación Estima't, con el objetivo de hacerla más interactiva y mantenerla constantemente actualizada, brindando así una plataforma más dinámica y accesible para los usuarios. Decidimos colaborar con esta asociacion ya que creemos que es un tema que necesita mas visibilidad y apoyo por parte de la sociedad.
+As visiting users of the website, we will have complete access to all displayed content, as well as the ability to log in with our personal accounts to highlight those news items that interest us the most. On the other hand, as administrators, we will have full access to the internal management of the application, allowing us to add, edit, and delete both news items and images, as well as user profiles as necessary. 
 
-<h2> How does it work?</h2>
-La página web se compone de diversos apartados, que abarcan desde información detallada sobre la enfermedad y la labor de la asociación, hasta noticias relevantes y galerías de imágenes que muestran las actividades como asambleas y talleres organizados por la misma. Además, cuenta con una plataforma interna que facilita la gestión eficiente de todo el contenido.
+On our website, we have enabled a contact section that offers users the possibility to communicate with the association via email or social media. Additionally, we have integrated an interactive map that shows the physical location of the association, making it easier for users who wish to visit in person.
 
-Como usuarios visitantes de la página, dispondremos de acceso completo a todo el contenido exhibido, así como la posibilidad de iniciar sesión con nuestras cuentas personales para destacar aquellas noticias que más nos interesen. Por otro lado, en calidad de administradores, tendremos acceso total a la gestión interna de la aplicación, lo que nos permitirá añadir, editar y eliminar tanto noticias como imágenes y perfiles de usuarios según sea necesario.
+<h2>Technical Operation</h2>
+The project has been divided into two distinct parts: the front-end, developed in Angular, and the back-end, implemented using Symfony and MySQL. To facilitate project management and portability, we have chosen to use Docker images and containers. This decision allows us to maintain a consistent and reproducible development and deployment environment, simplifying collaboration between developers and ensuring greater consistency in the system's operation across different environments.
 
-En nuestro sitio web, hemos habilitado un apartado de contacto que ofrece a los usuarios la posibilidad de comunicarse con la asociación mediante correo electrónico o redes sociales. Además, hemos integrado un mapa interactivo que muestra la ubicación física de la asociación, facilitando así la visita a aquellos usuarios que deseen acercarse personalmente.
+## User Guide
 
-<h2> Funcionamiento Técnico </h2>
-El proyecto se ha dividido en dos partes distintas: el front-end, desarrollado en Angular, y el back-end, implementado utilizando Symfony y MySQL. Para facilitar la gestión y la portabilidad del proyecto, hemos optado por utilizar imágenes y contenedores de Docker. Esta decisión nos permite mantener un entorno de desarrollo y despliegue consistente y reproducible, lo que simplifica la colaboración entre desarrolladores y asegura una mayor consistencia en el funcionamiento del sistema en diferentes entornos.
-
-
-## Guia de Uso
-
-- Descargamos el .ZIP y nos posicionamos en la carpeta `my-project`, después levantamos por comando nuestro contenedor de Docker
+- Download the .ZIP file and navigate to the `my-project` folder, then start our Docker container via command line
 ```bash
   cd my-project
   docker-compose up -d
 ```
-- Una vez tengamos levantado el contenedor, nos desplazamos a la carpeta `my-app`e instalamos angular
+
+- Once the container is up and running, navigate to the my-app folder and install Angular
 ```bash
   cd my-app
   npm install
   port: 4200
 ```
-- Cuando ya tengamos todo instalado, levantamos el servidor para poder visualizar el proyecto.
+
+- After everything is installed, start the server to preview the project.
 ```bash
-ng serve
+  ng serve
 ```
-- Este comando nos llevara al navegador y podremos acceder a la aplicación
+
+- This command will open the browser, allowing us to access the application. 🚀
+
 ## Authors
 
 - [@Nando](https://www.github.com/nandopiles)
@@ -43,4 +43,3 @@ ng serve
 - [@Eva](https://www.github.com/evpebe)
 - [@Moisés](https://www.github.com/mojial)
 - [@Jesús](https://www.github.com/jgarcia311999)
-
