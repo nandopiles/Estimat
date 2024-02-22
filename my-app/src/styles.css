@@ -9,6 +9,11 @@
     /* Mantenemos el color original */
 }
 
+.nav-link:hover {
+    color: #1c929b;
+    transition: 0.5s;
+}
+
 .login-button {
     color: white;
     border: none;
