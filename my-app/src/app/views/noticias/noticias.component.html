@@ -1,3 +1,5 @@
 <app-jumbotron-noticias></app-jumbotron-noticias>
 
-<app-card-noticias></app-card-noticias>
+@for (specificNew of news; track $index) {
+<app-card-noticias [infoNew]="specificNew"></app-card-noticias>
+}

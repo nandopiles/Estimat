@@ -15,12 +15,12 @@ export interface User {
 
 export interface Favs {
     user: User;
-    new: INews;
+    new: INew;
     users: string;
     date: Date;
 }
 
-export interface INews {
+export interface INew {
     id: number;
     title: string;
     description: string;

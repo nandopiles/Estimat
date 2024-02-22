@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Favs, INews, User } from '../interfaces/estimat.interface';
+import { Favs, INew, User } from '../interfaces/estimat.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -16,10 +16,10 @@ export class EstimatService {
    * Gets all the news from the API.
    * @returns {INews[]}
    */
-  public getNews(): Observable<INews[]> {
+  public getNews(): Observable<INew[]> {
     const urlGetAllNews: string = `${this.urlAPI}list/news`;
 
-    return this.http.get<INews[]>(urlGetAllNews);
+    return this.http.get<INew[]>(urlGetAllNews);
   }
 
   /* public getCardsInfo():Observable<ICardInfo[]>{
