@@ -1,10 +1,9 @@
 <div class="row">
-        <div class="row">
-            @for (image of imagesGallery; track $index) {
-            <div class="col-md-3 col-sm-6 justify-content-center align-items-center d-flex pt-4">
-                <img [src]="image" alt="logo" style="max-width: 400px;">
-            </div>
+    <div class="row">
+        @for (image of imagesGallery; track $index) {
+        <div class="col-md-3 col-sm-6 justify-content-center align-items-center d-flex pt-4">
+            <img [src]="image" alt="logo">
+        </div>
         }
-        </div> 
+    </div>
 </div>
-
