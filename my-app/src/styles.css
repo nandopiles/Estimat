@@ -10,7 +10,7 @@
 }
 
 .nav-link:hover {
-    color: #1c929b;
+    color: #093236;
     transition: 0.5s;
 }
 
@@ -66,8 +66,15 @@ p {
 }
 
 @keyframes parpadeo {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
 }
 
 @media (max-width: 768px) {
@@ -140,12 +147,15 @@ footer {
 
 }
 
-.facebook:hover, .twitter:hover, .mail:hover, .youtube:hover {
+.facebook:hover,
+.twitter:hover,
+.mail:hover,
+.youtube:hover {
     opacity: 0.4;
 }
 
 .copyright {
-color: gray;
+    color: gray;
 }
 
 #pie {
