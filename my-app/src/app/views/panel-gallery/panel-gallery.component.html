@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="row">
+        @for (imageCard of imagesGallery; track $index) {
+                <div class="col-md-4 col-sm-6 justify-content-center align-items-center d-flex pt-4">
+                    <div class="imageContainer">
+                    <img class="imageGallery" [src]="imageCard" alt="logo" style="max-width: 400px;">
+                        <button class="btn btn-outline-danger" class="deleteButton">Delete</button>
+                </div>
+                </div>
+    }
+    </div> 
+</div>
