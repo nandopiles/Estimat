@@ -1,0 +1,43 @@
+.jumbotron {
+    margin-top: 30px;
+    position: relative;
+    height: 400px;
+    /* Ajusta la altura del jumbotron según sea necesario */
+}
+
+.jumbotron::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    /* Color de fondo con opacidad */
+}
+
+.contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    color: white;
+    /* Color del texto */
+    z-index: 1;
+    /* Asegura que el texto esté encima del fondo */
+}
+
+.contenido h1 {
+    font-size: 48px;
+    /* Tamaño del título */
+    margin-bottom: 20px;
+    /* Espaciado inferior del título */
+}
+
+.contenido p {
+    font-size: 24px;
+    /* Tamaño del texto */
+}
