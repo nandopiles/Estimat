@@ -19,7 +19,7 @@
 }
 
 .login-button:hover {
-    background-color: rgb(178, 176, 176);
+    opacity: 0.4;
     /* Nuevo color de fondo al pasar el ratón sobre el botón */
     border-radius: 25px;
 }
