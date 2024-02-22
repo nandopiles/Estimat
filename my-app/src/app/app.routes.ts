@@ -11,7 +11,9 @@ import { PanelNewsComponent } from './views/panel-news/panel-news.component';
 import { PanelUserComponent } from './views/panel-user/panel-user.component';
 import { PerfilComponent } from './views/perfil/perfil.component';
 import { ProfileLayoutComponent } from './layouts/profile-layout/profile-layout.component';
+import { PerfilConfigComponent } from './views/perfil-config/perfil-config.component';
 import { PanelGalleryComponent } from './views/panel-gallery/panel-gallery.component';
+
 
 export const routes: Routes = [
     {
@@ -42,7 +44,8 @@ export const routes: Routes = [
         component: ProfileLayoutComponent,
         children: [
             { path: '', redirectTo: 'profile', pathMatch: 'full' },
-            { path: 'profile', component: PerfilComponent }
+            { path: 'profile', component: PerfilComponent },
+            { path: 'profileConifg', component: PerfilConfigComponent }
         ]
     }
 ];
