@@ -14,6 +14,7 @@ import { ProfileLayoutComponent } from './layouts/profile-layout/profile-layout.
 import { PerfilConfigComponent } from './views/perfil-config/perfil-config.component';
 import { PanelGalleryComponent } from './views/panel-gallery/panel-gallery.component';
 import { LoginComponent } from './views/login/login.component';
+import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 
 
 export const routes: Routes = [
@@ -52,7 +53,7 @@ export const routes: Routes = [
     },
     {
         path: '',
-        component: ProfileLayoutComponent,
+        component: LoginLayoutComponent,
         children: [
             { path: '', redirectTo: 'login', pathMatch: 'full' },
             { path: 'login', component: LoginComponent },
