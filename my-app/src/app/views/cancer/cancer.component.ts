@@ -20,7 +20,7 @@ export class CancerComponent {
             formando un tumor que puede propagarse a tejidos cercanos o a otras partes del cuerpo a través
             del sistema linfático o sanguíneo.Es una de las formas más comunes de cáncer entre las mujeres,
             aunque también puede afectar a los hombres en menor medida.`,
-            img: '/assets/img/title1.png'
+            img: '/assets/img/pexels-photo-cd.png'
         },
         {
             title: 'Tratamiento.',
@@ -31,7 +31,7 @@ export class CancerComponent {
             hormonal para bloquear el crecimiento de las células cancerosas que son estimuladas por
             hormonas, y terapia dirigida que ataca específicamente las células cancerosas. El tratamiento
             puede ser combinación de estas opciones o individual, dependiendo del caso.`,
-            img: '/assets/img/title1.png'
+            img: '/assets/img/pexels-photo2.png'
         },
         {
             title: 'Impacto.',
@@ -42,7 +42,7 @@ export class CancerComponent {
             enfermedad también puede afectar las relaciones personales, la vida laboral y la autoestima. Es
             fundamental contar con un sólido sistema de apoyo emocional y médico para hacer frente a los
             desafíos que presenta el cáncer de mama.`,
-            img: '/assets/img/title1.png'
+            img: '/assets/img/pexels-cupcakes.jpg'
         }
     ]
 }
