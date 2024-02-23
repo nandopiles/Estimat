@@ -1,5 +1,13 @@
 <app-jumbotron-noticias></app-jumbotron-noticias>
 
+@if (loading) {
+<div class="justify-content-center d-flex">
+    <mat-spinner></mat-spinner>
+</div>
+}
+
+@if (!loading) {
 @for (specificNew of news; track $index) {
 <app-card-noticias [infoNew]="specificNew"></app-card-noticias>
+}
 }

@@ -3,13 +3,14 @@ import { JumbotronNoticiasComponent } from "../../components/jumbotron-noticias/
 import { CardNoticiasComponent } from "../../components/card-noticias/card-noticias.component";
 import { EstimatService } from '../../services/estimat.service';
 import { INew } from '../../interfaces/estimat.interface';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
     selector: 'app-noticias',
     standalone: true,
     templateUrl: './noticias.component.html',
     styleUrl: './noticias.component.css',
-    imports: [JumbotronNoticiasComponent, CardNoticiasComponent]
+    imports: [JumbotronNoticiasComponent, CardNoticiasComponent, MatProgressSpinnerModule]
 })
 export class NoticiasComponent implements OnInit {
     public news: INew[] = [
@@ -20,6 +21,7 @@ export class NoticiasComponent implements OnInit {
             image: 'https://via.placeholder.com/800x400'
         }
     ];
+    public loading: boolean = true;
 
     public constructor(public _estimatService: EstimatService) { }
 
@@ -31,7 +33,9 @@ export class NoticiasComponent implements OnInit {
         this._estimatService.getNews().subscribe((news) => {
             this.news = [];
 
-            news.forEach((specificNew) => this.news.push(specificNew))
+            news.forEach((specificNew) => this.news.push(specificNew));
+
+            this.loading = false;
         });
 
 
