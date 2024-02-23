@@ -12,7 +12,14 @@ import { INew } from '../../interfaces/estimat.interface';
     imports: [JumbotronNoticiasComponent, CardNoticiasComponent]
 })
 export class NoticiasComponent implements OnInit {
-    public news: INew[] = [];
+    public news: INew[] = [
+        {
+            id: 0,
+            title: '',
+            description: '',
+            image: 'https://via.placeholder.com/800x400'
+        }
+    ];
 
     public constructor(public _estimatService: EstimatService) { }
 
@@ -22,7 +29,10 @@ export class NoticiasComponent implements OnInit {
      */
     public ngOnInit(): void {
         this._estimatService.getNews().subscribe((news) => {
-            news.forEach((specificNew) => news.push(specificNew))
+            this.news = [];
+            news.forEach((specificNew) => this.news.push(specificNew))
         });
+
+
     }
 }
