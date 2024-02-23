@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ICardInfo } from '../../../interfaces/cardInfo.interface';
+import { ICardInfo } from '../../../interfaces/estimat.interface';
 
 @Component({
   selector: 'app-img-index-card',

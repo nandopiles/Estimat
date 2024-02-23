@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { JumbotronComponent } from '../../components/jumbotron/jumbotron.component';
 import { ImgIndexCardComponent } from '../../components/index/img-index-card/img-index-card.component';
 import { DescriptionIndexCardComponent } from '../../components/index/description-index-card/description-index-card.component';
-import { ICardInfo } from '../../interfaces/cardInfo.interface';
+import { ICardInfo } from '../../interfaces/estimat.interface';
 
 @Component({
   selector: 'app-index',

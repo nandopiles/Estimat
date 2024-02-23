@@ -1,0 +1,26 @@
+# nelmio_cors:
+#   defaults:
+#     origin_regex: true
+#     allow_origin: ["%env(CORS_ALLOW_ORIGIN)%"]
+#     allow_methods: ["GET", "OPTIONS", "POST", "PUT", "PATCH", "DELETE"]
+#     allow_headers: ["Content-Type", "Authorization"]
+#     expose_headers: ["Link"]
+#     max_age: 3600
+#   paths:
+#     "^/": null
+
+nelmio_cors:
+  defaults:
+    origin_regex: true
+    allow_origin: ["^http://localhost:4200$"]
+    allow_methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+    allow_headers: ["Content-Type", "Authorization"]
+    max_age: 3600
+  paths:
+    "^/":
+      origin_regex: true
+      allow_origin: ["^http://localhost:4200$"]
+      allow_methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+      allow_headers: ["Content-Type", "Authorization"]
+      max_age: 3600
+      expose_headers: ["Link"]

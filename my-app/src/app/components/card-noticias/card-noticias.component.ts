@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { INew } from '../../interfaces/estimat.interface';
 
 @Component({
   selector: 'app-card-noticias',
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './card-noticias.component.css'
 })
 export class CardNoticiasComponent {
-
+  @Input() infoNew: INew = {
+    id: 0,
+    title: '',
+    description: '',
+    image: ''
+  }
 }
