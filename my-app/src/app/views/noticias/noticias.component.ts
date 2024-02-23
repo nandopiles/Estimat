@@ -3,7 +3,8 @@ import { JumbotronNoticiasComponent } from "../../components/jumbotron-noticias/
 import { CardNoticiasComponent } from "../../components/card-noticias/card-noticias.component";
 import { EstimatService } from '../../services/estimat.service';
 import { INew } from '../../interfaces/estimat.interface';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressSpinnerModule, ProgressSpinnerMode } from '@angular/material/progress-spinner';
+import { ThemePalette } from '@angular/material/core';
 
 @Component({
     selector: 'app-noticias',
@@ -22,6 +23,8 @@ export class NoticiasComponent implements OnInit {
         }
     ];
     public loading: boolean = true;
+    public colorSpinner: ThemePalette = "accent";
+    public mode: ProgressSpinnerMode = 'indeterminate';
 
     public constructor(public _estimatService: EstimatService) { }
 
