@@ -7,6 +7,9 @@ import { INew } from '../interfaces/estimat.interface';
   providedIn: 'root'
 })
 export class EstimatService {
+  addNews(newNews: INew) {
+    throw new Error('Method not implemented.');
+  }
 
   private urlAPI: string = 'http://localhost:8000/';
 
@@ -16,9 +19,17 @@ export class EstimatService {
    * Gets all the news from the API.
    * @returns {INews[]}
    */
+
   public getNews(): Observable<INew[]> {
     const urlGetAllNews: string = `${this.urlAPI}list/news`;
 
     return this.http.get<INew[]>(urlGetAllNews);
   }
+
+  public getInsertNews(): Observable<INew[]> {
+    const urlInsertNews: string = `${this.urlAPI}/insert/news`;
+
+    return this.http.get<INew[]>(urlInsertNews);
+  }
+  
 }

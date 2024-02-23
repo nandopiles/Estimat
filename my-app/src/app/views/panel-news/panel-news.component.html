@@ -19,7 +19,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form id="news-form">
+                        <form id="news-form" (ngSubmit)="addNews()" >
                             <div class="mb-3">
                                 <label for="news-title" class="form-label">Título:</label>
                                 <input type="text" class="form-control" id="news-title" placeholder="Añade el título"
