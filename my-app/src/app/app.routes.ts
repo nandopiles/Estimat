@@ -13,6 +13,7 @@ import { PerfilComponent } from './views/perfil/perfil.component';
 import { ProfileLayoutComponent } from './layouts/profile-layout/profile-layout.component';
 import { PerfilConfigComponent } from './views/perfil-config/perfil-config.component';
 import { PanelGalleryComponent } from './views/panel-gallery/panel-gallery.component';
+import { LoginComponent } from './views/login/login.component';
 
 
 export const routes: Routes = [
@@ -26,6 +27,7 @@ export const routes: Routes = [
             { path: 'about', component: NosotrosComponent },
             { path: 'news', component: NoticiasComponent },
             { path: 'gallery', component: GaleriaComponent },
+            { path: 'login', component: LoginComponent },
         ]
     },
     {
