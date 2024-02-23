@@ -26,9 +26,20 @@
                     </li>
                 </ul>
             </div>
+
+            @if (isLogged) {
+            @if (userLogged.role) {
+            <!-- Admin -->
+            } @else {
+            <!-- User -->
             <a class="nav-link" routerLink="/profile" routerLinkActive="active"><img class="login-button" width="40"
                     height="40" src="https://img.icons8.com/pastel-glyph/40/user-male-circle.png"
                     alt="user-male-circle" /></a>
+            }
+            } @else {
+            <!-- No logged -->
+
+            }
         </div>
     </nav>
 </header>
