@@ -17,7 +17,7 @@ export class NoticiasComponent implements OnInit {
         {
             id: 0,
             title: 'Título',
-            description: 'Descripción de la noticia.',
+            description: 'Descripción de la noticia',
             image: 'https://via.placeholder.com/800x400'
         }
     ];
