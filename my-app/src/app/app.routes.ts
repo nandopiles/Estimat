@@ -27,7 +27,7 @@ export const routes: Routes = [
             { path: 'about', component: NosotrosComponent },
             { path: 'news', component: NoticiasComponent },
             { path: 'gallery', component: GaleriaComponent },
-            { path: 'login', component: LoginComponent },
+
         ]
     },
     {
@@ -48,6 +48,15 @@ export const routes: Routes = [
             { path: '', redirectTo: 'profile', pathMatch: 'full' },
             { path: 'profile', component: PerfilComponent },
             { path: 'profileConifg', component: PerfilConfigComponent }
+        ]
+    },
+    {
+        path: '',
+        component: ProfileLayoutComponent,
+        children: [
+            { path: '', redirectTo: 'login', pathMatch: 'full' },
+            { path: 'login', component: LoginComponent },
+            
         ]
     }
 ];
