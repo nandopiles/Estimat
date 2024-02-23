@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IUser } from '../../interfaces/estimat.interface';
 import { EstimatService } from '../../services/estimat.service';
@@ -10,17 +10,8 @@ import { EstimatService } from '../../services/estimat.service';
   templateUrl: './panel-user.component.html',
   styleUrl: './panel-user.component.css'
 })
-export class PanelUserComponent {
-  public users: IUser[] = [
-    {
-      id: 0,
-      email: '',
-      name: '',
-      password: '',
-      role: false,
-      status: false
-    }
-  ];
+export class PanelUserComponent implements OnInit {
+  public users: IUser[] = [];
 
   public constructor(public _estimatService: EstimatService) { }
 
@@ -40,6 +31,16 @@ export class PanelUserComponent {
    */
   public deleteUser(idUser: number): void {
 
+  }
+
+  /**
+   * Loads all the users from the database.
+   * @returns {void}
+   */
+  public ngOnInit(): void {
+    this._estimatService.getUsers().subscribe((usersApi) => {
+      usersApi.forEach((user) => this.users.push(user))
+    })
   }
 
   /* public insertNewUser(): void {
