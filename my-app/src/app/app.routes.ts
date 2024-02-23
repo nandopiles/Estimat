@@ -15,6 +15,7 @@ import { PerfilConfigComponent } from './views/perfil-config/perfil-config.compo
 import { PanelGalleryComponent } from './views/panel-gallery/panel-gallery.component';
 import { LoginComponent } from './views/login/login.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
+import { RegisterComponent } from './views/register/register.component';
 
 
 export const routes: Routes = [
@@ -57,7 +58,7 @@ export const routes: Routes = [
         children: [
             { path: '', redirectTo: 'login', pathMatch: 'full' },
             { path: 'login', component: LoginComponent },
-            
+            { path: 'register', component: RegisterComponent}
         ]
     }
 ];
