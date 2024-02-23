@@ -1,0 +1,22 @@
+.videoFrame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -100px;
+}
+
+#banda{
+    background-color: #000;
+    width: 50%;
+    height: 1px;
+    margin: 0 auto;
+    margin-top: 10px;
+    opacity: 0.5;
+
+}
+
+iframe {
+    width: 60%; 
+    height: 60%;
+}
