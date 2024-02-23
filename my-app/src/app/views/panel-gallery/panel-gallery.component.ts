@@ -35,6 +35,6 @@ export class PanelGalleryComponent {
     '../../../assets/imagesGallery/gallery23.jpg',
     '../../../assets/imagesGallery/gallery24.jpg'
   ]
-  
+
   public deleteButon: any;
 }

@@ -2,6 +2,7 @@
   <main class="col-md-9 ms-sm-auto col-lg-9 px-md-4 align-self-center">
     <h1>GESTIÓN DE USUARIOS</h1>
 
+    @if (loading) {
     <table>
       <thead>
         <tr>
@@ -26,12 +27,15 @@
       </tbody>
 
       <!-- <tfoot>
-        <tr>
-          <td colspan="4" class="centered-button">
-            <button (click)="" class="btnInsertar">Insertar</button>
-          </td>
-        </tr>
-      </tfoot> -->
+          <tr>
+            <td colspan="4" class="centered-button">
+              <button (click)="" class="btnInsertar">Insertar</button>
+            </td>
+          </tr>
+        </tfoot> -->
     </table>
+    } @else {
+    <!-- spinner -->
+    }
   </main>
 </div>

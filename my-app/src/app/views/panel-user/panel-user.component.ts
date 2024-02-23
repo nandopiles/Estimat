@@ -12,6 +12,7 @@ import { EstimatService } from '../../services/estimat.service';
 })
 export class PanelUserComponent implements OnInit {
   public users: IUser[] = [];
+  public loading: boolean = false;
 
   public constructor(public _estimatService: EstimatService) { }
 
@@ -39,8 +40,9 @@ export class PanelUserComponent implements OnInit {
    */
   public ngOnInit(): void {
     this._estimatService.getUsers().subscribe((usersApi) => {
-      usersApi.forEach((user) => this.users.push(user))
-    })
+      usersApi.forEach((user) => this.users.push(user));
+      this.loading = true;
+    });
   }
 
   /* public insertNewUser(): void {
