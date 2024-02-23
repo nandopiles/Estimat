@@ -13,4 +13,4 @@ values
     (116, 'Investigación sobre terapias alternativas para el cáncer de mama', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Estudios exploran el papel de terapias complementarias en el tratamiento del cáncer de mama.', 'assets/imagesGallery/gallery7.jpg');
 
 insert into `favs` (`id`, `date`, `users_id`, `news_id`) 
-values (100, '2024/02/16', 101, 101);
+values (100, '2024/02/16', 101, 109);
