@@ -28,6 +28,7 @@ export class PanelNewsComponent {
     }
 
     const newNews: INew = {
+      id: this.newsForm.value.i,
       title: this.newsForm.value.title,
       description: this.newsForm.value.description,
       image: this.newsForm.value.imageUrl
