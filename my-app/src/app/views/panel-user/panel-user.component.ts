@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IUser } from '../../interfaces/estimat.interface';
+import { EstimatService } from '../../services/estimat.service';
 
 @Component({
   selector: 'app-panel-user',
@@ -21,10 +22,22 @@ export class PanelUserComponent {
     }
   ];
 
+  public constructor(public _estimatService: EstimatService) { }
+
+  /**
+   * Edits the user's info of a specific user.
+   * @param {number} idUser
+   * @returns {void}
+   */
   public editUser(idUser: number): void {
 
   }
 
+  /**
+   * Deletes a user.
+   * @param {number} idUser
+   * @returns {void}
+   */
   public deleteUser(idUser: number): void {
 
   }
