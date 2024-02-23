@@ -3,23 +3,28 @@ import { JumbotronNoticiasComponent } from "../../components/jumbotron-noticias/
 import { CardNoticiasComponent } from "../../components/card-noticias/card-noticias.component";
 import { EstimatService } from '../../services/estimat.service';
 import { INew } from '../../interfaces/estimat.interface';
+import { MatProgressSpinnerModule, ProgressSpinnerMode } from '@angular/material/progress-spinner';
+import { ThemePalette } from '@angular/material/core';
 
 @Component({
     selector: 'app-noticias',
     standalone: true,
     templateUrl: './noticias.component.html',
     styleUrl: './noticias.component.css',
-    imports: [JumbotronNoticiasComponent, CardNoticiasComponent]
+    imports: [JumbotronNoticiasComponent, CardNoticiasComponent, MatProgressSpinnerModule]
 })
 export class NoticiasComponent implements OnInit {
     public news: INew[] = [
         {
             id: 0,
             title: 'Título',
-            description: 'Descripción de la noticia.',
+            description: 'Descripción de la noticia',
             image: 'https://via.placeholder.com/800x400'
         }
     ];
+    public loading: boolean = true;
+    public colorSpinner: ThemePalette = "accent";
+    public mode: ProgressSpinnerMode = 'indeterminate';
 
     public constructor(public _estimatService: EstimatService) { }
 
@@ -31,7 +36,9 @@ export class NoticiasComponent implements OnInit {
         this._estimatService.getNews().subscribe((news) => {
             this.news = [];
 
-            news.forEach((specificNew) => this.news.push(specificNew))
+            news.forEach((specificNew) => this.news.push(specificNew));
+
+            this.loading = false;
         });
 
 
