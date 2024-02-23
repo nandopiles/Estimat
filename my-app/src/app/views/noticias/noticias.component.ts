@@ -30,6 +30,7 @@ export class NoticiasComponent implements OnInit {
     public ngOnInit(): void {
         this._estimatService.getNews().subscribe((news) => {
             this.news = [];
+
             news.forEach((specificNew) => this.news.push(specificNew))
         });
 
