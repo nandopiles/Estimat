@@ -18,7 +18,7 @@ export class IndexComponent {
       text: `Somos una asociación de mujeres afectadas de cáncer de mama que contamos con el respaldo de
       profesionales sanitarios. Queremos mejorar tu calidad de vida y minimizar los efectos de la enfermedad. Si
       piensas que podemos ayudarte, contacta con nosotras.`,
-      img: 'assets/img/title1.png'
+      img: 'assets/img/pexels-index.png'
     }
   ]
 }
