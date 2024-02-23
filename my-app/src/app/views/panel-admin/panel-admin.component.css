@@ -64,6 +64,42 @@ section {
 img {
     max-height: 100px;
     max-width: auto;
+
+}
+
+.centered-text {
+    text-align: center;
+    /* Para centrar el texto */
+}
+
+/* Estilos adicionales para el contenedor */
+.centered-container {
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col-md-3 {
+    margin-left: 100px;
+}
+
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centra verticalmente el contenido */
+    align-items: center;
+    /* Centra horizontalmente el contenido */
+    height: 100vh;
+    /* Ajusta la altura del contenedor al 100% del viewport */
+}
+
+
+
+
+.centered-container {
+    width: 100%;
 }
 
 
