@@ -15,8 +15,8 @@ export class NoticiasComponent implements OnInit {
     public news: INew[] = [
         {
             id: 0,
-            title: '',
-            description: '',
+            title: 'Título',
+            description: 'Descripción de la noticia.',
             image: 'https://via.placeholder.com/800x400'
         }
     ];
