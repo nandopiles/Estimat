@@ -21,6 +21,10 @@ export class PanelUserComponent implements OnInit {
 
   public constructor(public _estimatService: EstimatService) { }
 
+  /**
+   * Loads all the users from the database.
+   * @returns {void}
+   */
   public loadAllUsers(): void {
     this.users = [];
     this._estimatService.getUsers().subscribe((usersApi) => {
