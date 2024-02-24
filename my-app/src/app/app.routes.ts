@@ -16,6 +16,7 @@ import { PanelGalleryComponent } from './views/panel-gallery/panel-gallery.compo
 import { LoginComponent } from './views/login/login.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 import { RegisterComponent } from './views/register/register.component';
+import { ManageUserComponent } from './views/manage-user/manage-user.component';
 
 
 export const routes: Routes = [
@@ -40,7 +41,8 @@ export const routes: Routes = [
             { path: 'adminHome', component: PanelAdminComponent },
             { path: 'newsManagement', component: PanelNewsComponent },
             { path: 'usersManagement', component: PanelUserComponent },
-            { path: 'galleryManagement', component: PanelGalleryComponent }
+            { path: 'galleryManagement', component: PanelGalleryComponent },
+            { path: 'manageUserInfo', component: ManageUserComponent}
         ]
     },
     {

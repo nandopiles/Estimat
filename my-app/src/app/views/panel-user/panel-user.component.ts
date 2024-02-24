@@ -15,7 +15,7 @@ import { switchMap } from 'rxjs';
 })
 export class PanelUserComponent implements OnInit {
   public users: IUser[] = [];
-  public loading: boolean = false;
+  public loading: boolean = true; // cambiar a false después de hacer la funcionalidad de Insert
   public colorSpinner: ThemePalette = "accent";
   public mode: ProgressSpinnerMode = 'indeterminate';
 
@@ -41,7 +41,7 @@ export class PanelUserComponent implements OnInit {
   public editUser(idUser: number): void {
     this.loading = false; // enables the spin loader 
 
-    
+
   }
 
   /**
@@ -69,7 +69,7 @@ export class PanelUserComponent implements OnInit {
    * @returns {void}
    */
   public ngOnInit(): void {
-    this.loadAllUsers();
+    // this.loadAllUsers();
   }
 
   /* public insertNewUser(): void {
