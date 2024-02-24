@@ -13,6 +13,9 @@ import { PerfilComponent } from './views/perfil/perfil.component';
 import { ProfileLayoutComponent } from './layouts/profile-layout/profile-layout.component';
 import { PerfilConfigComponent } from './views/perfil-config/perfil-config.component';
 import { PanelGalleryComponent } from './views/panel-gallery/panel-gallery.component';
+import { LoginComponent } from './views/login/login.component';
+import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
+import { RegisterComponent } from './views/register/register.component';
 
 
 export const routes: Routes = [
@@ -26,6 +29,7 @@ export const routes: Routes = [
             { path: 'about', component: NosotrosComponent },
             { path: 'news', component: NoticiasComponent },
             { path: 'gallery', component: GaleriaComponent },
+
         ]
     },
     {
@@ -46,6 +50,15 @@ export const routes: Routes = [
             { path: '', redirectTo: 'profile', pathMatch: 'full' },
             { path: 'profile', component: PerfilComponent },
             { path: 'profileConifg', component: PerfilConfigComponent }
+        ]
+    },
+    {
+        path: '',
+        component: LoginLayoutComponent,
+        children: [
+            { path: '', redirectTo: 'login', pathMatch: 'full' },
+            { path: 'login', component: LoginComponent },
+            { path: 'register', component: RegisterComponent }
         ]
     }
 ];
