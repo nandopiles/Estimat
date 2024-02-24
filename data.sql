@@ -1,5 +1,13 @@
-INSERT INTO `user`(`id`, `name`, `password`, `email`, `status`, `role`) 
-VALUES (101, 'Nerea', '12345', 'eljesus@gmail.com', False, true);
+INSERT INTO `user` (`id`, `name`, `password`, `email`, `status`, `role`) 
+VALUES 
+    (101, 'Nerea', '12345', 'eljesus@gmail.com', FALSE, TRUE),
+    (102, 'Ejemplo1', 'password1', 'ejemplo1@gmail.com', TRUE, FALSE),
+    (103, 'Ejemplo2', 'password2', 'ejemplo2@gmail.com', FALSE, TRUE),
+    (104, 'Ejemplo3', 'password3', 'ejemplo3@gmail.com', TRUE, FALSE),
+    (105, 'Ejemplo4', 'password4', 'ejemplo4@gmail.com', FALSE, TRUE),
+    (106, 'Ejemplo5', 'password5', 'ejemplo5@gmail.com', TRUE, FALSE),
+    (107, 'Ejemplo6', 'password6', 'ejemplo6@gmail.com', FALSE, TRUE);
+
 
 insert into `news`(`id`, `title`, `description`, `image`)
 values 

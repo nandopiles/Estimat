@@ -2,17 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IUser } from '../../interfaces/estimat.interface';
 import { EstimatService } from '../../services/estimat.service';
+import { MatProgressSpinnerModule, ProgressSpinnerMode } from '@angular/material/progress-spinner';
+import { ThemePalette } from '@angular/material/core';
 
 @Component({
   selector: 'app-panel-user',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, MatProgressSpinnerModule],
   templateUrl: './panel-user.component.html',
   styleUrl: './panel-user.component.css'
 })
 export class PanelUserComponent implements OnInit {
   public users: IUser[] = [];
   public loading: boolean = false;
+  public colorSpinner: ThemePalette = "accent";
+  public mode: ProgressSpinnerMode = 'indeterminate';
 
   public constructor(public _estimatService: EstimatService) { }
 
