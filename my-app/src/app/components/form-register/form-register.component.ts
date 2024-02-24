@@ -13,13 +13,14 @@ import { HttpClient } from '@angular/common/http';
 export class FormRegisterComponent {
 
   public urlApi: string = 'http://localhost:8000/'; 
+  public role: boolean = false;
 
   reactiveForm = new FormGroup({
     email: new FormControl(''),
     password: new FormControl(''),
     name: new FormControl(''),
     repeatPassword: new FormControl(''),
-    cancer: new FormControl('')
+    status: new FormControl('')
   });
 
   constructor(private http: HttpClient) {} 
@@ -31,16 +32,24 @@ export class FormRegisterComponent {
   }
 
   public insertUser(): void {
-    const urlInsertUser = `${this.urlApi}insert/user`; 
-
-    // Envía la solicitud POST al servidor
-    this.http.post(urlInsertUser, this.reactiveForm.value).subscribe(
+    const urlInsertUser = `${this.urlApi}insert/user`;
+  
+    const userData = {
+      name: this.reactiveForm.value.name,
+      password: this.reactiveForm.value.password,
+      email: this.reactiveForm.value.email,
+      status: this.reactiveForm.value.status, // Asegúrate de tener un campo 'status' en tu formulario
+      role: this.role // Asegúrate de tener un campo 'role' en tu formulario
+    };
+  
+    this.http.post(urlInsertUser, userData).subscribe(
       (response) => {
-        console.log(response);
+        console.log(response); // Maneja la respuesta del servidor aquí
       },
       (error) => {
-        console.error(error);
+        console.error(error); // Maneja los errores aquí
       }
     );
   }
+  
 }
