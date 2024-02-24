@@ -13,7 +13,7 @@
                 "doctrine/doctrine-bundle": "^2.11",
                 "doctrine/doctrine-migrations-bundle": "^3.3",
                 "doctrine/orm": "^3.0",
-                "nelmio/cors-bundle": "^2.4",
+                "nelmio/cors-bundle": "*",
                 "symfony/console": "6.3.*",
                 "symfony/dotenv": "6.3.*",
                 "symfony/flex": "^2",
