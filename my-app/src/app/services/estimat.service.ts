@@ -31,4 +31,15 @@ export class EstimatService {
 
     return this.http.get<IUser[]>(urlGetAllUsers);
   }
+
+  /**
+   * Deletes the User selected by the user.
+   * @param {number} userId
+   * @returns {void}
+   */
+  public deleteUser(userId: number): Observable<void> {
+    const urlDeleteUser = `${this.urlAPI}delete/user/${userId}`
+
+    return this.http.delete<void>(urlDeleteUser);
+  }
 }

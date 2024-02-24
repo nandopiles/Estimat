@@ -4,6 +4,7 @@ import { IUser } from '../../interfaces/estimat.interface';
 import { EstimatService } from '../../services/estimat.service';
 import { MatProgressSpinnerModule, ProgressSpinnerMode } from '@angular/material/progress-spinner';
 import { ThemePalette } from '@angular/material/core';
+import { switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-panel-user',
@@ -20,6 +21,14 @@ export class PanelUserComponent implements OnInit {
 
   public constructor(public _estimatService: EstimatService) { }
 
+  public loadAllUsers(): void {
+    this.users = [];
+    this._estimatService.getUsers().subscribe((usersApi) => {
+      usersApi.forEach((user) => this.users.push(user));
+      this.loading = true;
+    });
+  }
+
   /**
    * Edits the user's info of a specific user.
    * @param {number} idUser
@@ -35,7 +44,10 @@ export class PanelUserComponent implements OnInit {
    * @returns {void}
    */
   public deleteUser(idUser: number): void {
-
+    this.loading = false;
+    this._estimatService.deleteUser(idUser);
+    this.loadAllUsers();
+  
   }
 
   /**
@@ -43,10 +55,7 @@ export class PanelUserComponent implements OnInit {
    * @returns {void}
    */
   public ngOnInit(): void {
-    this._estimatService.getUsers().subscribe((usersApi) => {
-      usersApi.forEach((user) => this.users.push(user));
-      this.loading = true;
-    });
+    this.loadAllUsers();
   }
 
   /* public insertNewUser(): void {
