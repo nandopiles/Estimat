@@ -1,0 +1,57 @@
+<div class="col-4 offset-4 mt-2"
+    style="background-color: white; padding: 30px; border-radius: 15px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+    <form (ngSubmit)="onSubmit()" [formGroup]="reactiveForm">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-10 offset-1 ">
+                <div class="form-group">
+                    <label style="margin-top: 15px;" for="email">Correo Electrónico:</label>
+                    <input style="margin-top: 5px;" type="email" class="form-control" id="email"
+                        placeholder="Ingresa tu correo electrónico" required formControlName="email">
+                </div>
+            </div>
+            <div class="col-10 offset-1 ">
+                <div class="form-group">
+                    <label style="margin-top: 15px;" for="name">Nombre:</label>
+                    <input style="margin-top: 5px;" type="text" class="form-control" id="name"
+                        placeholder="Ingresa tu correo electrónico" required formControlName="name">
+                </div>
+            </div>
+            <div class="col-10 offset-1 mt-1">
+                <div class="form-group">
+                    <label style="margin-top: 15px;" for="contrasena">Contraseña:</label>
+                    <input style="margin-top: 5px;" type="password" class="form-control" id="contrasena"
+                        placeholder="Ingresa tu contraseña" required formControlName="password">
+                </div>
+            </div>
+            <div class="col-10 offset-1 mt-1">
+                <div class="form-group" id="tratamientoGroup">
+                    <input class="form-check-input" type="checkbox" id="switchTratamiento" formControlName="status">
+                    <label class="form-check-label" for="switchTratamiento" id="labelTratamiento">Tratamiento
+                        activo</label>
+                </div>
+            </div>
+            <div class="col-10 offset-1 mt-1">
+                <div class="form-group" id="tratamientoGroup">
+                    <input class="form-check-input" type="checkbox" id="switchRole" formControlName="role">
+                    <label class="form-check-label" for="switchTratamiento" id="labelTratamiento">Admin</label>
+                </div>
+            </div>
+
+            @if (isNewUser) {
+            <div class="col-12">
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-secondary btn-block">Insertar</button>
+                </div>
+            </div>
+            } @else {
+            <div class="col-12">
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-secondary btn-block">Editar</button>
+                </div>
+            </div>
+            }
+
+            <a routerLink="/usersManagement" class="btn btn-outline-dark w-25 mt-3">Volver</a>
+        </div>
+    </form>
+</div>

@@ -26,6 +26,11 @@
         }
       </tbody>
     </table>
+
+    <div class="justify-content-center d-flex pt-5">
+      <a routerLink="/manageUserInfo" class="btn btn-outline-dark">Insertar Nuevo Usuario</a>
+    </div>
+
     } @else {
     <!-- spinner -->
     <div class="justify-content-center d-flex align-items-center">
@@ -34,33 +39,4 @@
     </div>
     }
   </main>
-</div>
-
-<div class="modal fade" id="addNewsModal" tabindex="-1" aria-labelledby="addNewsModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="addNewsModalLabel">Agregar Noticia</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form id="news-form">
-          <div class="mb-3">
-            <label for="news-title" class="form-label">Título:</label>
-            <input type="text" class="form-control" id="news-title" placeholder="Añade el título" required>
-          </div>
-          <div class="mb-3">
-            <label for="news-description" class="form-label">Descripción:</label>
-            <textarea class="form-control" id="news-description" rows="3" required
-              placeholder="Añade la descripción de la noticia"></textarea>
-          </div>
-          <div class="mb-3">
-            <label for="news-image-url" class="form-label">URL de la Imagen:</label>
-            <input type="url" class="form-control" id="news-image-url" required placeholder="Añade la URL de la imagen">
-          </div>
-          <button id="add" type="submit" class="btn btn-primary">Publicar Noticia</button>
-        </form>
-      </div>
-    </div>
-  </div>
 </div>
