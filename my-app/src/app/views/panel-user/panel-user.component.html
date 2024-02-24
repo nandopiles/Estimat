@@ -1,59 +1,66 @@
 <div class="row">
   <main class="col-md-9 ms-sm-auto col-lg-9 px-md-4 align-self-center">
     <h1>GESTIÓN DE USUARIOS</h1>
+
+    @if (loading) {
     <table>
       <thead>
         <tr>
-          <th>ID</th>
+          <th>Email</th>
           <th>Nombre</th>
-          <th>Status</th>
+          <th>Estado</th>
         </tr>
       </thead>
+
       <tbody>
+        @for (user of users; track $index) {
         <tr>
-          <td>Dato 1</td>
-          <td>Dato 2</td>
-          <td>Dato 3</td>
+          <td>{{user.email}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.status}}</td>
           <td class="button-container">
-            <button class="btnEditar">Editar</button>
-            <button class="btnEliminar">Eliminar</button>
+            <button (click)="editUser(user.id)" class="btnEditar">Editar</button>
+            <button (click)="deleteUser(user.id)" class="btnEliminar">Eliminar</button>
           </td>
         </tr>
-        <tr>
-          <td>Dato 1</td>
-          <td>Dato 2</td>
-          <td>Dato 3</td>
-          <td class="button-container">
-            <button class="btnEditar">Editar</button>
-            <button class="btnEliminar">Eliminar</button>
-          </td>
-        </tr>
-        <tr>
-          <td>Dato 1</td>
-          <td>Dato 2</td>
-          <td>Dato 3</td>
-          <td class="button-container">
-            <button class="btnEditar">Editar</button>
-            <button class="btnEliminar">Eliminar</button>
-          </td>
-        </tr>
-        <tr>
-          <td>Dato 1</td>
-          <td>Dato 2</td>
-          <td>Dato 3</td>
-          <td class="button-container">
-            <button class="btnEditar">Editar</button>
-            <button class="btnEliminar">Eliminar</button>
-          </td>
-        </tr>
+        }
       </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="4" class="centered-button">
-            <button class="btnInsertar">Insertar</button>
-          </td>
-        </tr>
-      </tfoot>
     </table>
+    } @else {
+    <!-- spinner -->
+    <div class="justify-content-center d-flex align-items-center">
+      <mat-progress-spinner [color]="colorSpinner" [mode]="mode">
+      </mat-progress-spinner>
+    </div>
+    }
   </main>
+</div>
+
+<div class="modal fade" id="addNewsModal" tabindex="-1" aria-labelledby="addNewsModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addNewsModalLabel">Agregar Noticia</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="news-form">
+          <div class="mb-3">
+            <label for="news-title" class="form-label">Título:</label>
+            <input type="text" class="form-control" id="news-title" placeholder="Añade el título" required>
+          </div>
+          <div class="mb-3">
+            <label for="news-description" class="form-label">Descripción:</label>
+            <textarea class="form-control" id="news-description" rows="3" required
+              placeholder="Añade la descripción de la noticia"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="news-image-url" class="form-label">URL de la Imagen:</label>
+            <input type="url" class="form-control" id="news-image-url" required placeholder="Añade la URL de la imagen">
+          </div>
+          <button id="add" type="submit" class="btn btn-primary">Publicar Noticia</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
