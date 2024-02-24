@@ -39,7 +39,9 @@ export class PanelUserComponent implements OnInit {
    * @returns {void}
    */
   public editUser(idUser: number): void {
+    this.loading = false; // enables the spin loader 
 
+    
   }
 
   /**
