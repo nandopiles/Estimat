@@ -30,7 +30,6 @@ export class UserFormComponent {
     role: new FormControl(this.userSelected.role)
   });
 
-
   public onSubmit(): void {
 
   }
