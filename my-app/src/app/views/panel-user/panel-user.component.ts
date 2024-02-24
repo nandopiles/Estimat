@@ -24,7 +24,7 @@ export class PanelUserComponent implements OnInit {
   public loadAllUsers(): void {
     this.users = [];
     this._estimatService.getUsers().subscribe((usersApi) => {
-      usersApi.forEach((user) => this.users.push(user));
+      this.users = usersApi;
       this.loading = true;
     });
   }
@@ -45,9 +45,17 @@ export class PanelUserComponent implements OnInit {
    */
   public deleteUser(idUser: number): void {
     this.loading = false;
-    this._estimatService.deleteUser(idUser);
-    this.loadAllUsers();
-  
+
+    this._estimatService.deleteUser(idUser) // when this method has been executed the flow will continue
+      .pipe(
+        switchMap(() => this._estimatService.getUsers()) // it'll wait until the method before has ended
+      )
+      .subscribe(
+        (usersApi) => {
+          this.users = usersApi;
+          this.loading = true;
+        }
+      );
   }
 
   /**
