@@ -1,16 +1,17 @@
 import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { UserFormComponent } from '../../components/user-form/user-form.component';
 
 @Component({
   selector: 'app-manage-user',
   standalone: true,
-  imports: [ReactiveFormsModule, RouterLink, RouterLinkActive],
+  imports: [ReactiveFormsModule, RouterLink, RouterLinkActive, UserFormComponent],
   templateUrl: './manage-user.component.html',
   styleUrl: './manage-user.component.css'
 })
 export class ManageUserComponent {
-  public reactiveForm = new FormGroup({
+  /* public reactiveForm = new FormGroup({
     name: new FormControl(''),
     password: new FormControl(''),
     email: new FormControl(''),
@@ -21,5 +22,5 @@ export class ManageUserComponent {
 
   public onSubmit(): void {
 
-  }
+  } */
 }
