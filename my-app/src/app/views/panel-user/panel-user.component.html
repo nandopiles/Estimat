@@ -8,7 +8,7 @@
         <tr>
           <th>Email</th>
           <th>Nombre</th>
-          <th>Estado</th>
+          <th>Tratamiento Activo</th>
         </tr>
       </thead>
 
@@ -17,7 +17,7 @@
         <tr>
           <td>{{user.email}}</td>
           <td>{{user.name}}</td>
-          <td>{{user.status}}</td>
+          <td>{{user.status ? '✅' : '❌'}}</td>
           <td class="button-container">
             <button routerLink="/manageUserInfo" [queryParams]="{id: user.id}" class="btnEditar">Editar</button>
             <button (click)="deleteUser(user.id)" class="btnEliminar">Eliminar</button>
