@@ -1,11 +1,18 @@
 <div class="row justify-content-center align-items-center">
-    <div class="col-md-4 col-sm-12 justify-content-center align-items-center d-flex pt-4">
+    <div class="col-md col-sm-12 justify-content-center align-items-center d-flex pt-4">
         <div class="card">
-            <img src="{{infoNew.image}}" class="card-img-top d-block w-100" alt="Slide 1">
+            <img src="{{infoNew.image}}" class="card-img-top" alt="Slide 1">
             <div class="card-body">
                 <h5 class="card-title">{{infoNew.title}}</h5>
                 <p class="card-text">{{infoNew.description}}</p>
-                <a href="#" class="btn btn-primary">Botón</a>
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-primary" disabled>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmark" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M18 7v14l-6 -4l-6 4v-14a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4z" />
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

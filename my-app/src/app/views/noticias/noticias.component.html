@@ -8,7 +8,14 @@
 }
 
 @if (!loading) {
+    <div class="row row-cols-1 row-cols-md-3 justify-content-center">
 @for (specificNew of news; track $index) {
+
+
 <app-card-noticias [infoNew]="specificNew"></app-card-noticias>
+
+
+    
 }
+    </div>
 }
