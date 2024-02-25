@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IUser } from '../../interfaces/estimat.interface';
@@ -11,27 +11,45 @@ import { EstimatService } from '../../services/estimat.service';
   templateUrl: './user-form.component.html',
   styleUrl: './user-form.component.css'
 })
-export class UserFormComponent {
+export class UserFormComponent implements OnInit {
   @Input() userSelected: any = {};
 
-  public reactiveForm = new FormGroup({ // loads the info of the user that has been passed. If there's no user the camps will be empty
-    name: new FormControl(this.userSelected.name || ''),
-    password: new FormControl(this.userSelected.password || ''),
-    email: new FormControl(this.userSelected.email || ''),
-    status: new FormControl(this.userSelected.status || false),
-    role: new FormControl(this.userSelected.role || false)
+  public reactiveForm = new FormGroup({
+    name: new FormControl(''),
+    password: new FormControl(''),
+    email: new FormControl(''),
+    status: new FormControl(false),
+    role: new FormControl(false),
   });
 
   public constructor(public _estimatService: EstimatService) { }
 
+  private populateForm(): void {
+    this.reactiveForm.setValue({
+      name: this.userSelected.name || '',
+      password: this.userSelected.password || '',
+      email: this.userSelected.email || '',
+      status: this.userSelected.status || false,
+      role: this.userSelected.role || false,
+    });
+  }
+
+  /**
+   * Fills the form's info with the User to modified.
+   * @returns {void}
+   */
+  public ngOnInit(): void {
+    this.populateForm();
+  }
+
   public onSubmit(): void {
     const userCreated: IUser = {
       id: this.userSelected.id,
-      email: this.reactiveForm.value.email,
-      name: this.reactiveForm.value.name,
-      password: this.reactiveForm.value.password,
-      status: this.reactiveForm.value.status,
-      role: this.reactiveForm.value.role
+      email: this.reactiveForm.value.email ?? '',
+      name: this.reactiveForm.value.name ?? '',
+      password: this.reactiveForm.value.password ?? '',
+      status: this.reactiveForm.value.status ?? false,
+      role: this.reactiveForm.value.role ?? false
     }
 
     if (this.userSelected.id === 0) { // is an insert

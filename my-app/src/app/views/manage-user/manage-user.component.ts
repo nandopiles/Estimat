@@ -3,25 +3,23 @@ import { ActivatedRoute } from '@angular/router';
 import { UserFormComponent } from '../../components/user-form/user-form.component';
 import { EstimatService } from '../../services/estimat.service';
 import { IUser } from '../../interfaces/estimat.interface';
+import { ThemePalette } from '@angular/material/core';
+import { MatProgressSpinnerModule, ProgressSpinnerMode } from '@angular/material/progress-spinner';
 
 
 @Component({
   selector: 'app-manage-user',
   standalone: true,
-  imports: [UserFormComponent],
+  imports: [UserFormComponent, MatProgressSpinnerModule],
   templateUrl: './manage-user.component.html',
   styleUrl: './manage-user.component.css'
 })
 export class ManageUserComponent implements OnInit {
   public idUser: any;
-  public userSelected: IUser = {
-    id: 0,
-    email: '',
-    name: '',
-    password: '',
-    role: false,
-    status: false
-  }
+  public userSelected: IUser | null = null;
+  public loading: boolean = false;
+  public colorSpinner: ThemePalette = "accent";
+  public mode: ProgressSpinnerMode = 'indeterminate';
 
   public constructor(private route: ActivatedRoute, public _estimatService: EstimatService) { }
 
@@ -39,6 +37,8 @@ export class ManageUserComponent implements OnInit {
 
         this._estimatService.getUserById(this.idUser).subscribe((user) => {
           this.userSelected = user;
+          console.log(user);
+          this.loading = true;
         });
       }
     })
