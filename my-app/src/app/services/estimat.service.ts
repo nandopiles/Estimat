@@ -7,6 +7,9 @@ import { INew, IUser } from '../interfaces/estimat.interface';
   providedIn: 'root'
 })
 export class EstimatService {
+  login(email: any, password: any) {
+    throw new Error('Method not implemented.');
+  }
 
   private urlAPI: string = 'http://localhost:8000/';
 

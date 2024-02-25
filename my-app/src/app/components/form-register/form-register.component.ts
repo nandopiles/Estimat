@@ -79,7 +79,15 @@ export class FormRegisterComponent implements OnInit {
 
     if (this.userSelected.id === 0) { // is an insert
       this._estimatService.insertUser(userCreated).subscribe((data) => console.log(data));
-      this.handleSuccessAndRedirect('/home');
+    } else { // is a modification of an existing User
+      this._estimatService.updateUser(userCreated).subscribe(
+        (data) => {
+          console.log(data);
+        },
+        (error) => {
+          this.handleSuccessAndRedirect('/home');
+        }
+      );
     }
   }
 }

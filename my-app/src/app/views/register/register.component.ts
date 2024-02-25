@@ -7,7 +7,7 @@ import { MatProgressSpinnerModule, ProgressSpinnerMode } from '@angular/material
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [FormRegisterComponent, MatProgressSpinnerModule, MatProgressSpinnerModule],
+  imports: [FormRegisterComponent, MatProgressSpinnerModule, MatProgressSpinnerModule ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
