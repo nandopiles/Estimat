@@ -22,6 +22,16 @@ export class EstimatService {
     return this.http.get<INew[]>(urlGetAllNews);
   }
 
+    /**
+   * Gets all the news from the API.
+   * @returns {INews[]}
+   */
+    public insertNews(): Observable<INew[]> {
+      const urlInsertNews: string = `${this.urlAPI}insert/news`;
+  
+      return this.http.get<INew[]>(urlInsertNews);
+    }
+
   /**
    * Gets all the users from the API.
    * @returns {INews[]}
