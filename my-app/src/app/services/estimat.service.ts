@@ -38,8 +38,19 @@ export class EstimatService {
    * @returns {void}
    */
   public deleteUser(userId: number): Observable<void> {
-    const urlDeleteUser = `${this.urlAPI}delete/user/${userId}`
+    const urlDeleteUser = `${this.urlAPI}delete/user/${userId}`;
 
     return this.http.delete<void>(urlDeleteUser);
+  }
+
+  /**
+   * Gets the user linked by the id passed by parameter.
+   * @param {number} userId
+   * @returns {IUser}
+   */
+  public getUserById(userId: number): Observable<IUser> {
+    const urlFindUserById = `${this.urlAPI}list/user/${userId}`;
+
+    return this.http.get<IUser>(urlFindUserById);
   }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserFormComponent } from '../../components/user-form/user-form.component';
+import { EstimatService } from '../../services/estimat.service';
 
 
 @Component({
@@ -11,9 +12,11 @@ import { UserFormComponent } from '../../components/user-form/user-form.componen
   styleUrl: './manage-user.component.css'
 })
 export class ManageUserComponent implements OnInit {
-  public idUser: number = 0;
+  public idUser: number | null = null;
 
-  public constructor(private route: ActivatedRoute) { }
+  public constructor(private route: ActivatedRoute, public _estimatService: EstimatService) { }
+
+
 
   /**
    * Gets the id of the user that has to be modified.
