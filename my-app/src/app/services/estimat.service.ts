@@ -75,4 +75,15 @@ export class EstimatService {
 
     return this.http.put<IUser>(urlUpdateUser, updatedUser);
   }
+
+  /**
+   * Login a user with the info passed by parameter.
+   * @param {IUser} loginUser
+   * @returns {IUser}
+   */
+  public loginUser(loginUser: IUser): Observable<IUser> {
+    const urlLoginUser = `${this.urlAPI}/list/users`
+
+    return this.http.post<IUser>(urlLoginUser, loginUser);
+  }
 }
