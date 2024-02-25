@@ -38,8 +38,41 @@ export class EstimatService {
    * @returns {void}
    */
   public deleteUser(userId: number): Observable<void> {
-    const urlDeleteUser = `${this.urlAPI}delete/user/${userId}`
+    const urlDeleteUser = `${this.urlAPI}delete/user/${userId}`;
 
     return this.http.delete<void>(urlDeleteUser);
+  }
+
+  /**
+   * Gets the user linked by the id passed by parameter.
+   * @param {number} userId
+   * @returns {IUser}
+   */
+  public getUserById(userId: number): Observable<IUser> {
+    const urlFindUserById = `${this.urlAPI}list/user/${userId}`;
+
+    return this.http.get<IUser>(urlFindUserById);
+  }
+
+  /**
+   * Inserts a new user with the info passed by parameter.
+   * @param {IUser} insertUser
+   * @returns {IUser}
+   */
+  public insertUser(insertUser: IUser): Observable<IUser> {
+    const urlInsertUser = `${this.urlAPI}insert/user`
+
+    return this.http.post<IUser>(urlInsertUser, insertUser);
+  }
+
+  /**
+   * Updates an existing User with the info passed by parameter.
+   * @param {IUser} updatedUser
+   * @returns {IUser}
+   */
+  public updateUser(updatedUser: IUser): Observable<IUser> {
+    const urlUpdateUser = `${this.urlAPI}update/user/${updatedUser.id}`;
+
+    return this.http.put<IUser>(urlUpdateUser, updatedUser);
   }
 }

@@ -29,25 +29,22 @@ class CrudController extends AbstractController
     // Methods related to user management
     #[Route('/insert/user', name: 'app_insertUser', methods: ['POST'])]
     // Method to insert a new user
-    public function insertUser(ManagerRegistry $doctrine, Request $request): JsonResponse {
-
+    public function insertUser(ManagerRegistry $doctrine, Request $request): JsonResponse
+    {
         $entityManager = $doctrine->getManager();
-        // Create a new instance of the User entity
+        $data = json_decode($request->getContent(), true);
 
         $user = new User();
-        // Set user data based on the received request
-        $user->setName($request->request->get('name'));
-        $user->setPassword($request->request->get('password'));
-        $user->setEmail($request->request->get('email'));
-        $user->setStatus($request->request->get('status'));
-        $user->setRole($request->request->get('role'));
+        $user->setName($data['name']);
+        $user->setPassword($data['password']);
+        $user->setEmail($data['email']);
+        $user->setStatus($data['status']);
+        $user->setRole($data['role']);
 
-        // Persist the user to the database
         $entityManager->persist($user);
         $entityManager->flush();
 
-        // Create a response with the newly created user data
-        $data = [
+        $responseData = [
             'id' => $user->getId(),
             'name' => $user->getName(),
             'password' => $user->getPassword(),
@@ -56,49 +53,46 @@ class CrudController extends AbstractController
             'role' => $user->isRole()
         ];
 
-        return new JsonResponse($data);
+        return new JsonResponse($responseData);
     }
 
     // Method to update an existing user
     #[Route('/update/user/{id}', name: 'app_updateUser', methods: ['put', 'patch'])]
-    public function updateUser(ManagerRegistry $doctrine, Request $request, int $id): JsonResponse {
-
+    public function updateUser(ManagerRegistry $doctrine, Request $request, int $id): JsonResponse
+    {
         $entityManager = $doctrine->getManager();
-
-        // Find the user by its ID in the database
         $user = $entityManager->getRepository(User::class)->find($id);
 
-        // Check if the user exists
         if (!$user) {
-            return $this->json('User not found for id' . $id , 404);
+            return $this->json('User not found for id ' . $id, 404);
         }
 
-        // Update user data based on the received request
-        $user->setName($request->request->get('name'));
-        $user->setPassword($request->request->get('password'));
-        $user->setEmail($request->request->get('email'));
-        $user->setStatus($request->request->get('status'));
-        $user->setRole($request->request->get('role'));
+        $data = json_decode($request->getContent(), true);
 
-        // Save the changes to the database
+        $user->setName($data['name'] ?? $user->getName());
+        $user->setPassword($data['password'] ?? $user->getPassword());
+        $user->setEmail($data['email'] ?? $user->getEmail());
+        $user->setStatus($data['status'] ?? $user->getStatus());
+        $user->setRole($data['role'] ?? $user->getRole());
+
         $entityManager->flush();
 
-        // Create a response with the updated user data
-        $data = [
+        $responseData = [
             'id' => $user->getId(),
             'name' => $user->getName(),
             'password' => $user->getPassword(),
             'email' => $user->getEmail(),
-            'status' => $user->isStatus(),
-            'role' => $user->isRole()
+            'status' => $user->getStatus(),
+            'role' => $user->getRole()
         ];
 
-        return $this->json($data);
+        return $this->json($responseData);
     }
 
     // Method to delete a user
     #[Route('/delete/user/{id}', name: 'app_deleteUser', methods: ['delete'])]
-    public function deleteUser(ManagerRegistry $doctrine, int $id): JsonResponse {
+    public function deleteUser(ManagerRegistry $doctrine, int $id): JsonResponse
+    {
 
         $entityManager = $doctrine->getManager();
 
@@ -107,7 +101,7 @@ class CrudController extends AbstractController
 
         // Check if the user exists
         if (!$user) {
-            return $this->json('User not found for id' . $id , 404);
+            return $this->json('User not found for id' . $id, 404);
         }
 
         // Remove the user from the database
@@ -123,7 +117,8 @@ class CrudController extends AbstractController
 
     // Method to insert a new news
     #[Route('/insert/news', name: 'app_insertNews', methods: ['POST'])]
-    public function insertNews(ManagerRegistry $doctrine, Request $request): JsonResponse {
+    public function insertNews(ManagerRegistry $doctrine, Request $request): JsonResponse
+    {
 
         $entityManager = $doctrine->getManager();
 
@@ -153,7 +148,8 @@ class CrudController extends AbstractController
 
     // Method to update an existing news
     #[Route('/update/news/{id}', name: 'app_updateNews', methods: ['put', 'patch'])]
-    public function updateNews(ManagerRegistry $doctrine, Request $request, int $id): JsonResponse {
+    public function updateNews(ManagerRegistry $doctrine, Request $request, int $id): JsonResponse
+    {
 
         $entityManager = $doctrine->getManager();
 
@@ -162,7 +158,7 @@ class CrudController extends AbstractController
 
         // Check if the news exists
         if (!$news) {
-            return $this->json('User not found for id' . $id , 404);
+            return $this->json('User not found for id' . $id, 404);
         }
 
         // Update news data based on the received request
@@ -187,7 +183,8 @@ class CrudController extends AbstractController
 
     // Method to delete a news
     #[Route('/delete/news/{id}', name: 'app_deleteNews', methods: ['delete'])]
-    public function deleteNews(ManagerRegistry $doctrine, int $id): JsonResponse {
+    public function deleteNews(ManagerRegistry $doctrine, int $id): JsonResponse
+    {
 
         $entityManager = $doctrine->getManager();
 
@@ -196,7 +193,7 @@ class CrudController extends AbstractController
 
         // Check if the news exists
         if (!$news) {
-            return $this->json('User not found for id' . $id , 404);
+            return $this->json('User not found for id' . $id, 404);
         }
 
         // Remove the news from the database
@@ -206,5 +203,4 @@ class CrudController extends AbstractController
         // Create a response indicating that the news has been successfully deleted
         return $this->json('Deleted a user successfully with id' . $id);
     }
-
 }

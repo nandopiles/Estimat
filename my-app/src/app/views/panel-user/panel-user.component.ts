@@ -15,7 +15,7 @@ import { switchMap } from 'rxjs';
 })
 export class PanelUserComponent implements OnInit {
   public users: IUser[] = [];
-  public loading: boolean = true; // cambiar a false después de hacer la funcionalidad de Insert
+  public loading: boolean = false;
   public colorSpinner: ThemePalette = "accent";
   public mode: ProgressSpinnerMode = 'indeterminate';
 
@@ -31,17 +31,6 @@ export class PanelUserComponent implements OnInit {
       this.users = usersApi;
       this.loading = true;
     });
-  }
-
-  /**
-   * Edits the user's info of a specific user.
-   * @param {number} idUser
-   * @returns {void}
-   */
-  public editUser(idUser: number): void {
-    this.loading = false; // enables the spin loader 
-
-
   }
 
   /**
@@ -69,10 +58,6 @@ export class PanelUserComponent implements OnInit {
    * @returns {void}
    */
   public ngOnInit(): void {
-    // this.loadAllUsers();
+    this.loadAllUsers();
   }
-
-  /* public insertNewUser(): void {
-
-  } */
 }
