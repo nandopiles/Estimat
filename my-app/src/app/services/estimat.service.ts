@@ -4,13 +4,12 @@ import { Observable } from 'rxjs';
 import { INew, IUser } from '../interfaces/estimat.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class EstimatService {
-
   private urlAPI: string = 'http://localhost:8000/';
 
-  constructor(public http: HttpClient) { }
+  constructor(public http: HttpClient) {}
 
   /**
    * Gets all the news from the API.
@@ -22,15 +21,15 @@ export class EstimatService {
     return this.http.get<INew[]>(urlGetAllNews);
   }
 
-    /**
+  /**
    * Gets all the news from the API.
    * @returns {INews[]}
    */
-    public insertNews(): Observable<INew[]> {
-      const urlInsertNews: string = `${this.urlAPI}insert/news`;
-  
-      return this.http.get<INew[]>(urlInsertNews);
-    }
+  public insertNews(): Observable<INew[]> {
+    const urlInsertNews: string = `${this.urlAPI}insert/news`;
+
+    return this.http.get<INew[]>(urlInsertNews);
+  }
 
   /**
    * Gets all the users from the API.
@@ -48,7 +47,7 @@ export class EstimatService {
    * @returns {void}
    */
   public deleteUser(userId: number): Observable<void> {
-    const urlDeleteUser = `${this.urlAPI}delete/user/${userId}`
+    const urlDeleteUser = `${this.urlAPI}delete/user/${userId}`;
 
     return this.http.delete<void>(urlDeleteUser);
   }
