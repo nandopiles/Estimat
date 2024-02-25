@@ -71,8 +71,4 @@ export class PanelUserComponent implements OnInit {
   public ngOnInit(): void {
     // this.loadAllUsers();
   }
-
-  /* public insertNewUser(): void {
-
-  } */
 }
