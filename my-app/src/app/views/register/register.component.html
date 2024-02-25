@@ -4,8 +4,16 @@
         <div class="row" style="padding-top: 150px;">
             <h1 class="title1">REGÍSTRATE</h1>
 
-            <app-form-register></app-form-register>
+            @if (loading) {
+                <app-user-form [userSelected]="userSelected"></app-user-form>
+                } @else {
+                <div class="justify-content-center d-flex align-items-center">
+                    <mat-progress-spinner [color]="colorSpinner" [mode]="mode">
+                    </mat-progress-spinner>
+                </div>
+                }
             
         </div>
     </div>
 </div>
+
