@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IUser } from '../../interfaces/estimat.interface';
+import { EstimatService } from '../../services/estimat.service';
 
 @Component({
   selector: 'app-user-form',
@@ -21,6 +22,8 @@ export class UserFormComponent {
     role: new FormControl(this.userSelected.role || false)
   });
 
+  public constructor(public _estimatService: EstimatService) { }
+
   public onSubmit(): void {
     const userCreated: IUser = {
       id: this.userSelected.id,
@@ -31,7 +34,9 @@ export class UserFormComponent {
       role: this.reactiveForm.value.role
     }
     if (this.userSelected.id === 0) { // is an insert
+      console.log('aaa');
 
+      this._estimatService.insertUser(userCreated).subscribe((data) => console.log(data));
     } else { // is a modification of an existing User
 
     }
