@@ -2,16 +2,17 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { EstimatService } from '../../services/estimat.service';
+import { FormComponent } from '../../components/form/form.component';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormBuilder, FormGroup, Validators],
+  imports: [FormComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  loginForm: FormGroup;
+ /* loginForm: FormGroup;
   errorMessage: string | undefined;
 
   constructor(
@@ -45,7 +46,7 @@ export class LoginComponent {
         this.errorMessage = 'Error en el servidor, por favor intenta de nuevo más tarde';
       }
     );
-  }
+  }*/
 }
 
 
