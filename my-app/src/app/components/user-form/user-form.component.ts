@@ -14,7 +14,6 @@ export class UserFormComponent {
   @Input() userSelected: any = {};
 
   public reactiveForm = new FormGroup({ // loads the info of the user that has been passed. If there's no user the camps will be empty
-    id: new FormControl(this.userSelected.id || ''),
     name: new FormControl(this.userSelected.name || ''),
     password: new FormControl(this.userSelected.password || ''),
     email: new FormControl(this.userSelected.email || ''),
@@ -23,6 +22,19 @@ export class UserFormComponent {
   });
 
   public onSubmit(): void {
+    const userCreated: IUser = {
+      id: this.userSelected.id,
+      email: this.reactiveForm.value.email,
+      name: this.reactiveForm.value.name,
+      password: this.reactiveForm.value.password,
+      status: this.reactiveForm.value.status,
+      role: this.reactiveForm.value.role
+    }
+    if (this.userSelected.id === 0) { // is an insert
 
+    } else { // is a modification of an existing User
+
+    }
+    console.log(userCreated);
   }
 }

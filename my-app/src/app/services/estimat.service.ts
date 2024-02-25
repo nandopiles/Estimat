@@ -53,4 +53,15 @@ export class EstimatService {
 
     return this.http.get<IUser>(urlFindUserById);
   }
+
+  /**
+   * Inserts a new user with the info passed by parameter.
+   * @param {IUser} insertUser
+   * @returns {IUser}
+   */
+  public insertUser(insertUser: IUser): Observable<IUser> {
+    const urlInsertUser = `${this.urlAPI}insert/user`
+
+    return this.http.post<IUser>(urlInsertUser, insertUser);
+  }
 }

@@ -35,6 +35,8 @@ export class ManageUserComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       if (params['id']) {
         this.idUser = params['id'];
+        console.log('id: ' + this.idUser);
+
         this._estimatService.getUserById(this.idUser).subscribe((user) => {
           this.userSelected = user;
         });
