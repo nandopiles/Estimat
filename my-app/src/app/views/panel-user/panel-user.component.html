@@ -19,8 +19,7 @@
           <td>{{user.name}}</td>
           <td>{{user.status}}</td>
           <td class="button-container">
-            <button routerLink="/manageUserInfo" [queryParams]="{id: user.id}" (click)="editUser(user.id)"
-              class="btnEditar">Editar</button>
+            <button routerLink="/manageUserInfo" [queryParams]="{id: user.id}" class="btnEditar">Editar</button>
             <button (click)="deleteUser(user.id)" class="btnEliminar">Eliminar</button>
           </td>
         </tr>
