@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IUser } from '../../interfaces/estimat.interface';
@@ -20,7 +20,7 @@ export class UserFormComponent {
     role: false,
     status: false
   }
-  @Output() userModified = new EventEmitter<IUser>();
+  // @Output() userModified = new EventEmitter<IUser>();
   public reactiveForm = new FormGroup({ // loads the info of the user that has been passed. If there's no user the camps will be empty
     id: new FormControl(this.userSelected.id),
     name: new FormControl(this.userSelected.name),
