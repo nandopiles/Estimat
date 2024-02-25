@@ -7,6 +7,9 @@ import { INew, IUser } from '../interfaces/estimat.interface';
   providedIn: 'root'
 })
 export class EstimatService {
+  login(email: any, password: any) {
+    throw new Error('Method not implemented.');
+  }
 
   private urlAPI: string = 'http://localhost:8000/';
 
@@ -74,5 +77,16 @@ export class EstimatService {
     const urlUpdateUser = `${this.urlAPI}update/user/${updatedUser.id}`;
 
     return this.http.put<IUser>(urlUpdateUser, updatedUser);
+  }
+
+  /**
+   * Login a user with the info passed by parameter.
+   * @param {IUser} loginUser
+   * @returns {IUser}
+   */
+  public loginUser(loginUser: IUser): Observable<IUser> {
+    const urlLoginUser = `${this.urlAPI}/list/users`
+
+    return this.http.post<IUser>(urlLoginUser, loginUser);
   }
 }
