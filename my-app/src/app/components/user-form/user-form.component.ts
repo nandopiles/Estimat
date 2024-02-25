@@ -11,7 +11,6 @@ import { IUser } from '../../interfaces/estimat.interface';
   styleUrl: './user-form.component.css'
 })
 export class UserFormComponent {
-  @Input() isNewUser: boolean = false;
   @Input() userSelected: any = {};
 
   public reactiveForm = new FormGroup({ // loads the info of the user that has been passed. If there's no user the camps will be empty

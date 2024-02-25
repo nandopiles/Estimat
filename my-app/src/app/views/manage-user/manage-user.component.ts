@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserFormComponent } from '../../components/user-form/user-form.component';
 import { EstimatService } from '../../services/estimat.service';
+import { IUser } from '../../interfaces/estimat.interface';
 
 
 @Component({
@@ -12,11 +13,17 @@ import { EstimatService } from '../../services/estimat.service';
   styleUrl: './manage-user.component.css'
 })
 export class ManageUserComponent implements OnInit {
-  public idUser: number | null = null;
+  public idUser: any;
+  public userSelected: IUser = {
+    id: 0,
+    email: '',
+    name: '',
+    password: '',
+    role: false,
+    status: false
+  }
 
   public constructor(private route: ActivatedRoute, public _estimatService: EstimatService) { }
-
-
 
   /**
    * Gets the id of the user that has to be modified.
@@ -26,8 +33,12 @@ export class ManageUserComponent implements OnInit {
    */
   public ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
-      if (params['id'])
+      if (params['id']) {
         this.idUser = params['id'];
+        this._estimatService.getUserById(this.idUser).subscribe((user) => {
+          this.userSelected = user;
+        });
+      }
     })
   }
 }
