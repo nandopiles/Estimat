@@ -33,13 +33,11 @@ export class UserFormComponent {
       status: this.reactiveForm.value.status,
       role: this.reactiveForm.value.role
     }
+    
     if (this.userSelected.id === 0) { // is an insert
-      console.log('aaa');
-
       this._estimatService.insertUser(userCreated).subscribe((data) => console.log(data));
     } else { // is a modification of an existing User
 
     }
-    console.log(userCreated);
   }
 }

@@ -54,33 +54,6 @@ class CrudController extends AbstractController
         ];
 
         return new JsonResponse($responseData);
-
-        /* $entityManager = $doctrine->getManager();
-        // Create a new instance of the User entity
-
-        $user = new User();
-        // Set user data based on the received request
-        $user->setName($request->request->get('name'));
-        $user->setPassword($request->request->get('password'));
-        $user->setEmail($request->request->get('email'));
-        $user->setStatus($request->request->get('status'));
-        $user->setRole($request->request->get('role'));
-
-        // Persist the user to the database
-        $entityManager->persist($user);
-        $entityManager->flush();
-
-        // Create a response with the newly created user data
-        $data = [
-            'id' => $user->getId(),
-            'name' => $user->getName(),
-            'password' => $user->getPassword(),
-            'email' => $user->getEmail(),
-            'status' => $user->isStatus(),
-            'role' => $user->isRole()
-        ];
-
-        return new JsonResponse($data); */
     }
 
     // Method to update an existing user
