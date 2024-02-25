@@ -12,22 +12,15 @@ import { IUser } from '../../interfaces/estimat.interface';
 })
 export class UserFormComponent {
   @Input() isNewUser: boolean = false;
-  @Input() userSelected: IUser = {
-    id: 0,
-    email: '',
-    name: '',
-    password: '',
-    role: false,
-    status: false
-  }
-  // @Output() userModified = new EventEmitter<IUser>();
+  @Input() userSelected: any = {};
+
   public reactiveForm = new FormGroup({ // loads the info of the user that has been passed. If there's no user the camps will be empty
-    id: new FormControl(this.userSelected.id),
-    name: new FormControl(this.userSelected.name),
-    password: new FormControl(this.userSelected.password),
-    email: new FormControl(this.userSelected.email),
-    status: new FormControl(this.userSelected.status),
-    role: new FormControl(this.userSelected.role)
+    id: new FormControl(this.userSelected.id || ''),
+    name: new FormControl(this.userSelected.name || ''),
+    password: new FormControl(this.userSelected.password || ''),
+    email: new FormControl(this.userSelected.email || ''),
+    status: new FormControl(this.userSelected.status || false),
+    role: new FormControl(this.userSelected.role || false)
   });
 
   public onSubmit(): void {
