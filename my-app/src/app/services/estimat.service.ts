@@ -64,4 +64,15 @@ export class EstimatService {
 
     return this.http.post<IUser>(urlInsertUser, insertUser);
   }
+
+  /**
+   * Updates an existing User with the info passed by parameter.
+   * @param {IUser} updatedUser
+   * @returns {IUser}
+   */
+  public updateUser(updatedUser: IUser): Observable<IUser> {
+    const urlUpdateUser = `${this.urlAPI}update/user/${updatedUser.id}`;
+
+    return this.http.put<IUser>(urlUpdateUser, updatedUser);
+  }
 }
