@@ -6,23 +6,23 @@
             <form>
                 <h4>Nueva contraseña</h4>
                 <div class="input-group mb-3">
-                    <input type="password" class="form-control" #newPasswordInput id="newPasswordInput">
+                    <input type="password" class="form-control" #newPasswordInput id="newPasswordInput" disabled>
                     <button class="btn btn-outline-secondary" type="button" id="btnNewPass"
-                        (click)="togglePasswordVisibility()">👁</button>
+                        (click)="togglePasswordVisibility()" disabled>👁</button>
                 </div>
 
                 <h4>Repite contraseña</h4>
                 <div class="input-group mb-3">
-                    <input type="password" class="form-control" #repeatPasswordInput id="repeatPasswordInput">
+                    <input type="password" class="form-control" #repeatPasswordInput id="repeatPasswordInput" disabled>
                     <button class="btn btn-outline-secondary" type="button" id="btnRepeatPass"
-                        (click)="togglePasswordVisibility()">👁</button>
+                        (click)="togglePasswordVisibility()" disabled>👁</button>
                 </div>
 
-                <button type="submit" class="btn btn-outline-secondary" id="btnEnv">Cambiar contraseña</button>
+                <button type="submit" class="btn btn-outline-secondary" id="btnEnv" disabled>Cambiar contraseña</button>
 
 
                 <div class="form-check form-switch" id="tratamientoGroup">
-                    <input class="form-check-input" type="checkbox" id="switchTratamiento">
+                    <input class="form-check-input" type="checkbox" id="switchTratamiento" disabled>
                     <label class="form-check-label" for="switchTratamiento" id="labelTratamiento">Tratamiento
                         activo</label>
                 </div>
@@ -30,7 +30,7 @@
                 <h4>Selecciona idioma</h4>
 
                 <div class="input-group mb-3">
-                    <select class="form-select" id="selectorIdioma" aria-label="Selecciona tu idioma">
+                    <select class="form-select" id="selectorIdioma" aria-label="Selecciona tu idioma" disabled>
                         <option value="es">Español</option>
                         <option value="en">Inglés</option>
                     </select>
@@ -39,7 +39,7 @@
                 <h4>Modo de la pagina</h4>
 
                 <div class="form-check form-switch" id="tratamientoGroup">
-                    <input class="form-check-input" type="checkbox" id="switchTratamiento">
+                    <input class="form-check-input" type="checkbox" id="switchTratamiento" disabled>
                     <label class="form-check-label" for="switchTratamiento" id="labelTratamiento">Modo</label>
                 </div>
             </form>
