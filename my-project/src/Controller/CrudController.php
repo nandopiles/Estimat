@@ -60,38 +60,33 @@ class CrudController extends AbstractController
     #[Route('/update/user/{id}', name: 'app_updateUser', methods: ['put', 'patch'])]
     public function updateUser(ManagerRegistry $doctrine, Request $request, int $id): JsonResponse
     {
-
         $entityManager = $doctrine->getManager();
-
-        // Find the user by its ID in the database
         $user = $entityManager->getRepository(User::class)->find($id);
 
-        // Check if the user exists
         if (!$user) {
-            return $this->json('User not found for id' . $id, 404);
+            return $this->json('User not found for id ' . $id, 404);
         }
 
-        // Update user data based on the received request
-        $user->setName($request->request->get('name'));
-        $user->setPassword($request->request->get('password'));
-        $user->setEmail($request->request->get('email'));
-        $user->setStatus($request->request->get('status'));
-        $user->setRole($request->request->get('role'));
+        $data = json_decode($request->getContent(), true);
 
-        // Save the changes to the database
+        $user->setName($data['name'] ?? $user->getName());
+        $user->setPassword($data['password'] ?? $user->getPassword());
+        $user->setEmail($data['email'] ?? $user->getEmail());
+        $user->setStatus($data['status'] ?? $user->getStatus());
+        $user->setRole($data['role'] ?? $user->getRole());
+
         $entityManager->flush();
 
-        // Create a response with the updated user data
-        $data = [
+        $responseData = [
             'id' => $user->getId(),
             'name' => $user->getName(),
             'password' => $user->getPassword(),
             'email' => $user->getEmail(),
-            'status' => $user->isStatus(),
-            'role' => $user->isRole()
+            'status' => $user->getStatus(),
+            'role' => $user->getRole()
         ];
 
-        return $this->json($data);
+        return $this->json($responseData);
     }
 
     // Method to delete a user
