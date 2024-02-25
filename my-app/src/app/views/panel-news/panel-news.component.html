@@ -20,25 +20,21 @@
                     </div>
                     <div class="modal-body">
 
-                        <form id="news-form">
-                            <div class="form-group">
+                        <form id="news-form" [formGroup]="newsForm" >
                                 <div class="mb-3">
                                     <label for="news-title" class="form-label">Título:</label>
-                                    <input type="text" class="form-control" id="news-title" placeholder="Añade el título"
-                                        required>
+                                    <input type="text" class="form-control" id="news-title" placeholder="Añade el título" required formControlName = "title">
                                 </div>
                                 <div class="mb-3">
                                     <label for="news-description" class="form-label">Descripción:</label>
-                                    <textarea class="form-control" id="news-description" rows="3" required
-                                        placeholder="Añade la descripción de la noticia"></textarea>
+                                    <textarea class="form-control" id="news-description" rows="3" required placeholder="Añade la descripción de la noticia" formControlName = "description">
+                                    </textarea>
                                 </div>
                                 <div class="mb-3">
                                     <label for="news-image-url" class="form-label">URL de la Imagen:</label>
-                                    <input type="url" class="form-control" id="news-image-url" required
-                                        placeholder="Añade la URL de la imagen">
+                                    <input type="url" class="form-control" id="news-image-url" required placeholder="Añade la URL de la imagen" formControlName = "image" >
                                 </div>
-                                <button id="add" type="submit" class="btn btn-primary">Publicar Noticia</button>
-                            </div>
+                                <button id="add" type="submit" class="btn btn-primary" (click)="createNew()">Publicar Noticia</button>
                         </form>
 
                     </div>
