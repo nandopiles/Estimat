@@ -168,3 +168,18 @@ footer {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Estilos para el modo claro */
+.light-mode {
+    /* Agrega tus estilos para el modo claro aquí */
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  /* Estilos para el modo oscuro */
+  .dark-mode {
+    /* Agrega tus estilos para el modo oscuro aquí */
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
