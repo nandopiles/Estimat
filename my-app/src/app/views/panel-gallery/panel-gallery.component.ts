@@ -20,5 +20,6 @@ export class PanelGalleryComponent {
   deletePhoto(index: number) {
       this._estimatService.getImages().splice(index, 1); // Elimina la foto del arreglo
   }
+  
 
 }
