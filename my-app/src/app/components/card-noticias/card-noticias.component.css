@@ -1,3 +1,30 @@
 .card {
-    width: 20rem;
+    width: 300px; /* Ancho deseado para las tarjetas */
+    height: 450px;
+    max-width: 100%; /* Asegura que la tarjeta no sea más ancha que el contenedor padre */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+.card img {
+    border-top-left-radius: 10px; /* Bordes redondeados solo para la esquina superior izquierda */
+    border-top-right-radius: 10px; /* Bordes redondeados solo para la esquina superior derecha */
+}
+
+.card-body {
+    padding: 20px; /* Espacio interno para el contenido de la tarjeta */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Tamaño de fuente del título */
+    margin-bottom: 10px; /* Espacio inferior entre el título y el texto */
+}
+
+.card-text {
+    font-size: 1rem; /* Tamaño de fuente del texto de la tarjeta */
+    color: #555; /* Color de texto gris oscuro */
+}
+
+.card .btn {
+    margin-top: 15px; /* Espacio superior para el botón */
 }
